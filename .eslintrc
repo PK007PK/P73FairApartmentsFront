@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 2,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 4,
+        "endOfLine": "auto",
+        "allowAsProps": true
+      },
+      {
+        "ignore": [ 'src/' ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+            ["src", "./src"],
+            ["pages", "./src/pages"],
+            ["component", "./src/components"],
+            ["images", "./src/images"],
+            ["fonts", "./src/fonts"],
+            ["styles", "./src/styles"]
+         ],
+         "extensions": [".js", ".jsx"]
+      }
+    }
+  }
+}
