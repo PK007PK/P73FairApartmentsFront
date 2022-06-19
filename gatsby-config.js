@@ -4,7 +4,7 @@ dotenv.config({ path: '.env' });
 
 export default {
     siteMetadata: {
-        siteUrl: process.env.URL,
+        siteUrl: process.env.SITE_URL,
     },
     plugins: [
         `gatsby-plugin-root-import`,
