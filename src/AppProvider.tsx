@@ -6,6 +6,8 @@ export const AppContext = createContext({
     isMenuActive: false,
     toogleIsMenuActive: () => {},
     diseableMenu: () => {},
+    search: "",
+    setSearch: (s: string) => {},
   });
 
 export function AppProvider({ children }: {children: React.ReactNode}) {
@@ -13,12 +15,16 @@ export function AppProvider({ children }: {children: React.ReactNode}) {
     const toogleIsMenuActive = () => setIsMenuActive((prevValue) => !prevValue);
     const diseableMenu = () => setIsMenuActive(false);
 
+    const [search, setSearch] = useState('');
+
     return (
         <AppContext.Provider
             value={{
                 isMenuActive,
                 toogleIsMenuActive,
                 diseableMenu,
+                search,
+                setSearch,
             }}
         >
             <ThemeProvider theme={theme}>

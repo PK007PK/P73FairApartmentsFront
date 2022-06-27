@@ -19,6 +19,9 @@ import { SanityPagesBasicStructure } from 'types/SanityPagesBasicStructure';
 import { InfiniteScroll } from 'components/atoms/InfiniteScroll/InfiniteScroll';
 import { Accordion } from 'components/atoms/Accordion/Accordion';
 import { accordionTemplateData } from 'data/accordionTemplateData';
+import { SearchApartment } from 'components/molecules/SearchApartment/SearchApartment';
+import { Title } from 'components/atoms/Title/Title';
+import { DisplayApartments } from 'components/molecules/DisplayApartments/DisplayApartments';
 
 const searchIndices = [{ name: `Pages`, title: `Pages` }];
 
@@ -170,7 +173,7 @@ const IndexPage: React.FunctionComponent<Props> = ({ data, pageContext, location
                         />
                     </BootsColumn>
                     <BootsColumn md={4}>
-                        <h3 style={{ marginTop: 'var(--spacingSmall)', textAlign: 'center' }}>Search site</h3>
+                        <h3 style={{ marginTop: 'var(--spacingSmall)', textAlign: 'center' }}>Znajdź w artykułach</h3>
                         <Search staticInput indices={searchIndices} />
                     </BootsColumn>
                 </BootsRow>
@@ -186,14 +189,17 @@ const IndexPage: React.FunctionComponent<Props> = ({ data, pageContext, location
                         />
                     </BootsColumn>
                     <BootsColumn md={4}>
-                        <Newsletter style={{ marginBottom: '50px' }} />
+                        {/* <Newsletter style={{ marginBottom: '50px' }} /> */}
                         <CardContactForm />
-                        <Accordion title="Accordion" data={accordionTemplateData} />
+                        {/* <Accordion title="Accordion" data={accordionTemplateData} /> */}
                     </BootsColumn>
                 </BootsRow>
                 <BootsRow>
                     <BootsColumn>
-                        <InfiniteScroll title="Infinite scroll" />
+                        <Title as="h2" center={false}>Nieruchomości w bazie</Title>
+                        <SearchApartment />
+                        {/* <InfiniteScroll title="Infinite scroll" /> */}
+                        <DisplayApartments />
                     </BootsColumn>
                 </BootsRow>
             </BootsContainer>
