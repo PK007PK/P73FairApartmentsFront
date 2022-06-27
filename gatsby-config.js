@@ -3,6 +3,10 @@ import dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
 
 export default {
+    proxy: {
+        prefix: '/api',
+        url: 'http://localhost:3001',
+    },
     siteMetadata: {
         siteUrl: process.env.SITE_URL,
     },
