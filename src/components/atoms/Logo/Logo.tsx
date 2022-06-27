@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import logoSign from 'assets/images/LogoSignVector.svg';
+import logoSign from 'assets/images/house-user-solid.svg';
 import { StyledLogo } from './Logo.style';
 
 interface QueryStructure {
@@ -23,7 +23,7 @@ export const Logo: React.FunctionComponent = (): JSX.Element => {
         <StyledLogo>
             <img className="sign" src={logoSign} alt={copyright} />
             <div className="textBlock">
-                <div className="top">Gatsby&Sanity starter</div>
+                <div className="top">FairApartments</div>
             </div>
         </StyledLogo>
     )

@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 import { CardBlogEntry } from 'components/molecules/CardBlogEntry/CardBlogEntry';
 import { PostsToDisplayStyles } from './PostsToDisplay.style';
+import { CardBlogEntrySmallBox } from '../CardBlogEntrySmallBox/CardBlogEntrySmallBox';
 
 type DataItem = {
     slug: {
@@ -22,7 +23,7 @@ export const PostsToDisplay: React.FunctionComponent<Props> = ({ data }): JSX.El
             .filter((item) => item.date !== null)
             .map((item) => (
                 <Link key={item.slug.current} to={`/${item.slug.current}`}>
-                    <CardBlogEntry data={item} />
+                    <CardBlogEntrySmallBox data={item} />
                 </Link>
             ))}
     </PostsToDisplayStyles>
