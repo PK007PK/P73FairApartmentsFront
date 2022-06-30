@@ -180,13 +180,13 @@ const IndexPage: React.FunctionComponent<Props> = ({ data, pageContext, location
                 <BootsRow id="blog" between>
                     <BootsColumn md={8}>
                         <PostsToDisplay data={postsToDisplay.nodes.slice(0, pagesInSet)} />
-                        <Pagination
+                        {/* <Pagination
                             pageSize={pagesInSet}
                             totalCount={postsToDisplay.totalCount}
                             currentPage={pageContext.currentPage || 1}
                             base={pageContext.dirName}
                             style={{ marginBottom: '25px' }}
-                        />
+                        /> */}
                     </BootsColumn>
                     <BootsColumn md={4}>
                         {/* <Newsletter style={{ marginBottom: '50px' }} /> */}

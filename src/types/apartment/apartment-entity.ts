@@ -3,12 +3,11 @@ export interface SimpleApartmentEntity {
     lat: number;
     lon: number;
     price: number;
+    name: string;
+    descriptionShort: string;
 }
 
 export interface ApartmentEntity extends SimpleApartmentEntity {
-    name: string;
-    descriptionShort: string;
-    staticSiteUrl: string;
 }
 
 export interface NewApartmentEntity extends Omit<ApartmentEntity, 'id'> {

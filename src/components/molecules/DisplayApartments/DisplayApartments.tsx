@@ -1,6 +1,7 @@
 import AppContext from "AppProvider"
 import React, { useContext, useEffect, useState } from "react"
 import { ApartmentEntity } from "types/apartment"
+import { CardApartmentEntry } from "../CardApartmentEntry/CardBlogEntry/CardApartmentEntry"
 
 export const DisplayApartments = () => {
     const {search} = useContext(AppContext)
@@ -28,7 +29,7 @@ export const DisplayApartments = () => {
     return (
         <div>
             {
-                apartments.map(ap=>ap.id)
+                apartments.map(ap=><CardApartmentEntry key={ap.id} {...ap}/>)
             }
         </div>
     )
