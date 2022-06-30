@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const CustomStyles = createGlobalStyle`
 
 
+
 .slick-slide {
   padding: 0 2px;
 }
