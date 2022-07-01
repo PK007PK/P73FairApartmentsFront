@@ -1,4 +1,5 @@
 import AppContext from "AppProvider"
+import { Link } from "gatsby"
 import React, { useContext, useEffect, useState } from "react"
 import { ApartmentEntity } from "types/apartment"
 import { CardApartmentEntry } from "../CardApartmentEntry/CardBlogEntry/CardApartmentEntry"
@@ -29,7 +30,15 @@ export const DisplayApartments = () => {
     return (
         <div>
             {
-                apartments.map(ap=><CardApartmentEntry key={ap.id} {...ap}/>)
+                apartments.map(
+                    (ap) => 
+                        <Link 
+                            to="apartments"
+                            state={{ apartmentId: ap.id }}
+                        >
+                            <CardApartmentEntry key={ap.id} {...ap}/>
+                        </Link>
+                )
             }
         </div>
     )
