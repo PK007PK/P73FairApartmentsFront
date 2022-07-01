@@ -5,6 +5,7 @@ export interface SimpleApartmentEntity {
     price: number;
     name: string;
     descriptionShort: string;
+    mainImgLink: string;
 }
 
 export interface ApartmentEntity extends SimpleApartmentEntity {
