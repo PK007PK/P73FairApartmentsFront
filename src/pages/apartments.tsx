@@ -6,10 +6,10 @@ import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
 import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
 import { SectionHero } from 'components/SectionHero/SectionHero';
 import { ApartmentDetails } from 'components/molecules/ApartmentDetails/ApartmentDetails';
-import { getSingleValueFromApi } from 'hooks/getSingleValueFromApi';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import { ApartmentEntity } from 'types/apartment';
-import { PictureForHeader } from 'components/atoms/PictureForHeader/PictureForHeader';
+import { Image } from 'components/atoms/Image/Image';
+import { alternateValue } from 'utils/alternateValue';
+import { ImgPlaceholder } from 'components/molecules/ImgPlaceholder/ImgPlaceholder';
 
 interface Props {
     data: {
@@ -33,7 +33,7 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
     }, [location])
 
     const [apartmentDetails, setApartmentDetails] = useState<ApartmentEntity | null>(null);
-
+    
     useEffect(()=>{
         (async (): Promise<void> => {
             try {
@@ -45,23 +45,23 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
             }
         })()
     }, [apartmentId])
-
-    let name: string, descriptionShort: string, mainImgLink: string = ""
-
-    if  (apartmentDetails) {
-        name = apartmentDetails.name;
-        descriptionShort = apartmentDetails.descriptionShort;
-        mainImgLink = apartmentDetails.mainImgLink;
-    }
-        
+       
     return (
         <Layout>
             <SEO title="O nas" />
             <SectionHero
                 Ycenter={true}
-                leftComponent={() => <HeroTextBlock title={name} description={descriptionShort}/>} 
+                leftComponent={() => 
+                    <HeroTextBlock 
+                        title={alternateValue(apartmentDetails?.name)} 
+                        description={alternateValue(apartmentDetails?.descriptionShort)}
+                    />} 
                 rightComponent={
-                    () => <PictureForHeader src={mainImgLink}/>
+                    () => apartmentDetails ? 
+                        <Image 
+                            src={alternateValue(apartmentDetails?.mainImgLink)} 
+                            alt={alternateValue(apartmentDetails?.name)}
+                        /> : <ImgPlaceholder style={{height: "300px"}}/>
                 }
             />
             <BootsContainer>

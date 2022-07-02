@@ -20,9 +20,6 @@ export const DisplayApartments = () => {
         })()
     },[search])
 
-    console.log(apartments);
-    
-
     if (apartments === []) {
         return null;
     }
@@ -35,6 +32,7 @@ export const DisplayApartments = () => {
                         <Link 
                             to="apartments"
                             state={{ apartmentId: ap.id }}
+                            key={ap.id}
                         >
                             <CardApartmentEntry key={ap.id} {...ap}/>
                         </Link>

@@ -4,23 +4,22 @@ import { Logo } from 'components/atoms/Logo/Logo';
 import { CardApartmentEntryStyle } from './CardApartmentEntry.style';
 import { SimpleApartmentEntity } from 'types/apartment';
 import { CardMapSmall } from 'components/molecules/CardMapSmall/CardMapSmall';
-
-interface Props extends SimpleApartmentEntity {
-}
+import { Image } from 'components/atoms/Image/Image';
 
 export const CardApartmentEntry: React.FunctionComponent<SimpleApartmentEntity> = (props) => {
     const { 
-        id,
         lat,
         lon,
         price,
         name,
         descriptionShort,
+        mainImgLink,
     } = props;
 
     return (
         <CardApartmentEntryStyle>
             <div className="imgWrapper">
+                <Image src={mainImgLink}/>
             </div>
             <div className="textWrapper">
                 <h3 className="title">{name}</h3>
