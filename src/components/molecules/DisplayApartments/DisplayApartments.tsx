@@ -28,7 +28,7 @@ export const DisplayApartments = () => {
         <div>
             {
                 apartments.map(
-                    (ap) => 
+                    (ap: ApartmentEntity) => 
                         <Link 
                             to="apartments"
                             state={{ apartmentId: ap.id }}

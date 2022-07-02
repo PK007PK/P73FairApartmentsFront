@@ -27,12 +27,14 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
     const [apartmentId, setApartmentId] = useState<string | null>(null)
 
     useEffect(()=>{
-        if (location.state.apartmentId) {
+        if (location?.state?.apartmentId) {
             setApartmentId(location.state.apartmentId)
         }
     }, [location])
 
     const [apartmentDetails, setApartmentDetails] = useState<ApartmentEntity | null>(null);
+    console.log(apartmentId);
+    console.log(apartmentDetails);
     
     useEffect(()=>{
         (async (): Promise<void> => {
@@ -57,7 +59,7 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
                         description={alternateValue(apartmentDetails?.descriptionShort)}
                     />} 
                 rightComponent={
-                    () => apartmentDetails ? 
+                    () => (apartmentDetails && apartmentDetails.mainImgLink !== "") ? 
                         <Image 
                             src={alternateValue(apartmentDetails?.mainImgLink)} 
                             alt={alternateValue(apartmentDetails?.name)}
