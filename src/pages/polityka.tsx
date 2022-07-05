@@ -48,7 +48,7 @@ const PolitykaPage: React.FunctionComponent<Props> = ({ data }): JSX.Element => 
                             blocks={_rawRichText}
                             dataset="production"
                             url=""
-                            projectId={process.env.SANITY_PROJECT_ID}
+                            projectId={process.env.SANITY_PROJECT_ID ?? ''}
                         />
                     </BootsColumn>
                     <BootsColumn md={5}>

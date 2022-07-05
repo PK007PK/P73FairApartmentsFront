@@ -8,7 +8,7 @@ export default {
         url: 'http://localhost:3001',
     },
     siteMetadata: {
-        siteUrl: process.env.SITE_URL,
+        siteUrl: process.env.SITE_URL ?? '',
     },
     plugins: [
         `gatsby-plugin-root-import`,
@@ -18,11 +18,11 @@ export default {
         {
             resolve: `gatsby-source-sanity`,
             options: {
-                projectId: process.env.SANITY_PROJECT_ID,
-                token: process.env.SANITY_TOKEN,
+                projectId: process.env.SANITY_PROJECT_ID ?? '',
+                token: process.env.SANITY_TOKEN ?? '',
                 dataset: `production`,
                 watchMode: true,
-                apiVersion: process.env.SANITY_API_VERSION,
+                apiVersion: process.env.SANITY_API_VERSION ?? '',
                 graphqlTag: `default`,
             },
         },
@@ -42,8 +42,8 @@ export default {
         {
             resolve: `gatsby-plugin-algolia`,
             options: {
-                appId: process.env.GATSBY_ALGOLIA_APP_ID,
-                apiKey: process.env.ALGOLIA_ADMIN_KEY,
+                appId: process.env.GATSBY_ALGOLIA_APP_ID ?? '',
+                apiKey: process.env.ALGOLIA_ADMIN_KEY ?? '',
                 queries: require('./src/utils/algolia-queries.ts'),
             },
         },
@@ -53,7 +53,7 @@ export default {
             options: {
                 // You can add multiple tracking ids and a pageview event will be fired for all of them.
                 trackingIds: [
-                    process.env.TRACKING_GOOGLE_ID, // Google Analytics / GA
+                    process.env.TRACKING_GOOGLE_ID ?? '', // Google Analytics / GA
                     // 'AW-CONVERSION_ID', // Google Ads / Adwords / AW
                     // 'DC-FLOODIGHT_ID', // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
                 ],
