@@ -2,9 +2,16 @@ import AppContext from "AppProvider"
 import { Link } from "gatsby"
 import React, { useContext, useEffect, useState } from "react"
 import { ApartmentEntity } from "types/apartment"
+import { CardApartmentBasicInfo } from "../CardApartmentBasicInfo/CardApartmentBasicInfo"
 import { CardApartmentEntry } from "../CardApartmentEntry/CardBlogEntry/CardApartmentEntry"
+import { DisplayApartmentsStyle } from "./DisplayApartments.style"
 
-export const DisplayApartments = () => {
+interface Props {
+    boxes: boolean,
+}
+
+export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.Element => {
+    const {boxes} = props;
     const {search} = useContext(AppContext)
     const [apartments, setApartments] = useState<ApartmentEntity[] | []>([])
     
@@ -21,23 +28,32 @@ export const DisplayApartments = () => {
     },[search])
 
     if (apartments === []) {
-        return null;
+        return <p>Brak nieruchomości</p>;
     }
 
     return (
-        <div>
+        <DisplayApartmentsStyle boxes={boxes}>
             {
                 apartments.map(
-                    (ap: ApartmentEntity) => 
-                        <Link 
-                            to="apartments"
-                            state={{ apartmentId: ap.id }}
-                            key={ap.id}
-                        >
-                            <CardApartmentEntry key={ap.id} {...ap}/>
-                        </Link>
+                    (ap: ApartmentEntity) => {
+                        if (boxes) {                        
+                            return (
+                                <CardApartmentBasicInfo key={ap.id} name={ap.name} image={ap.mainImgLink}/>
+                            )
+                        } else {
+                            return (
+                                <Link 
+                                    to="apartments"
+                                    state={{ apartmentId: ap.id }}
+                                    key={ap.id}
+                                >
+                                    <CardApartmentEntry key={ap.id} {...ap}/>
+                                </Link>
+                            )
+                        }
+                    }
                 )
             }
-        </div>
+        </DisplayApartmentsStyle>
     )
 }
