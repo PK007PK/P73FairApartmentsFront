@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { ButtonStyle } from 'components/atoms/Button/Button';
+import { Button } from 'components/atoms/Button/Button';
 import { CommonProps } from 'types/commonProps';
 import { FormNewsletterStyle } from './FormNewsletter.style';
 import { languageCheck } from 'hooks/languageCheck';
@@ -49,9 +49,9 @@ export const FormNewsletter: React.FunctionComponent<Props> = ({ status, message
                     </Link>
                 </p>
             </div>
-            <ButtonStyle full={true} type="button" onClick={submit}>
+            <Button full={true} type="button" onClick={submit}>
             {texts.send[lang]}
-            </ButtonStyle>
+            </Button>
         </FormNewsletterStyle>
     );
 };

@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { SEO } from 'components/atoms/SEO/SEO';
 import { Layout } from 'components/organisms/Layout/Layout';
 import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
 import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
 import { SectionHero } from 'components/SectionHero/SectionHero';
 import { DisplayApartments } from 'components/molecules/DisplayApartments/DisplayApartments';
-import { ApartmentForm } from 'components/molecules/ApartmentForm/ApartmentForm';
-import { CardApartmentBasicInfo } from 'components/molecules/CardApartmentBasicInfo/CardApartmentBasicInfo';
+import { Modal } from 'components/molecules/Modal/Modal';
+import { FormApartment } from 'components/molecules/FormApartment/FormApartment';
 
 interface Props {
    
 }
 
 const Admin: React.FunctionComponent<Props> = (): JSX.Element => {
+    const modalRef1 = useRef();
 
     return (
         <Layout>
@@ -22,7 +23,10 @@ const Admin: React.FunctionComponent<Props> = (): JSX.Element => {
             <BootsContainer>
                 <BootsRow between>
                     <BootsColumn>
-                        <CardApartmentBasicInfo name="Dodaj nową chatkę" />
+                        <button onClick={() => modalRef1.current.openModal()}>Dodaj apartament</button>
+                        <Modal ref={modalRef1} title="Dodaj apartament">
+                            <FormApartment />
+                        </Modal>
                         <DisplayApartments boxes={true} />
                     </BootsColumn>
                 </BootsRow>

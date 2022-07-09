@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useCallback, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles/Theme';
 
@@ -8,6 +8,7 @@ export const AppContext = createContext({
     diseableMenu: () => {},
     search: "",
     setSearch: (s: string) => {},
+    forceUpdate: () => {},
   });
 
 export function AppProvider({ children }: {children: React.ReactNode}) {
@@ -17,6 +18,9 @@ export function AppProvider({ children }: {children: React.ReactNode}) {
 
     const [search, setSearch] = useState('');
 
+    const [, updateState] = useState({});
+    const forceUpdate = useCallback(() => updateState({}), []);
+
     return (
         <AppContext.Provider
             value={{
@@ -25,6 +29,7 @@ export function AppProvider({ children }: {children: React.ReactNode}) {
                 diseableMenu,
                 search,
                 setSearch,
+                forceUpdate,
             }}
         >
             <ThemeProvider theme={theme}>

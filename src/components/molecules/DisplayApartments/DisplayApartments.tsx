@@ -38,7 +38,7 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
                     (ap: ApartmentEntity) => {
                         if (boxes) {                        
                             return (
-                                <CardApartmentBasicInfo key={ap.id} name={ap.name} image={ap.mainImgLink}/>
+                                <CardApartmentBasicInfo key={ap.id} name={ap.name} image={ap.mainImgLink} id={ap.id}/>
                             )
                         } else {
                             return (

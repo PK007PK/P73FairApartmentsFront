@@ -1,9 +1,10 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, forwardRef, useImperativeHandle, useContext, useEffect } from 'react';
 import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
 
 import { ModalStyles } from './Modal.style';
 import { CommonProps } from 'types/commonProps';
 import Portal from 'gatsby/portal';
+import AppContext from 'AppProvider';
 
 interface Props extends CommonProps {
     title: string,
@@ -11,7 +12,12 @@ interface Props extends CommonProps {
 
 // eslint-disable-next-line react/display-name
 export const Modal = forwardRef((props: Props, ref) => {
+    const {forceUpdate} = useContext(AppContext);
     const [display, setDisplay] = useState(false);
+
+    useEffect(()=>{
+        forceUpdate();
+    },[display])
 
     const handleOpen = () => {
         setDisplay(true);
@@ -19,6 +25,7 @@ export const Modal = forwardRef((props: Props, ref) => {
 
     const handleClose = () => {
         setDisplay(false);
+        window.location.reload();
     };
 
     useImperativeHandle(ref, () => ({

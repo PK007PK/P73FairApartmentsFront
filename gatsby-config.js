@@ -16,6 +16,13 @@ export default {
         `gatsby-plugin-image`,
         `gatsby-plugin-styled-components`,
         {
+            resolve: `gatsby-plugin-portal`,
+            options: {
+                key: 'portal',
+                id: 'portal',
+            },
+        },
+        {
             resolve: `gatsby-source-sanity`,
             options: {
                 projectId: process.env.SANITY_PROJECT_ID,

@@ -30,7 +30,7 @@ export const ModalStyles = styled.div`
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.98);
+        background-color: grey;
         box-shadow: 8px -5px 25px -10px rgba(0, 0, 0, 0.3);
         z-index: 2000;
     }

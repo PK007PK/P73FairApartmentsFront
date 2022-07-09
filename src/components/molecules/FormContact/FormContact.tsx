@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { ButtonStyle } from 'components/atoms/Button/Button';
+import { Button } from 'components/atoms/Button/Button';
 import { FormContactStyle } from './FormContact.style';
 import { formContactTexts } from './FormContact.texts';
 import { languageCheck } from 'hooks/languageCheck';
@@ -57,9 +57,9 @@ export const FormContact: React.FunctionComponent = (): JSX.Element => {
                     </Link>
                 </p>
             </div>
-            <ButtonStyle full type="submit">
+            <Button full type="submit">
                 {texts.send[lang]}
-            </ButtonStyle>
+            </Button>
         </FormContactStyle>
     );
 }
