@@ -20,9 +20,7 @@ export const OptionalBlogPostComponents: React.FunctionComponent<Props> = ({ dat
                     case 0:
                         return <CardContactForm key={i} className="item" />;
                     case 1:
-                        return <SocialShare key={i} className="item" title={title} excerpt={excerpt} messengerID={"1234"} />;
-                    case 2:
-                        return <Newsletter key={i} className="item" />;
+                        return <SocialShare key={i} className="item" title={title} excerpt={excerpt} messengerId={"1234"} />;
                     default:
                         break;
                 }

@@ -1,8 +1,8 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config({ path: '.env' });
 
-export default {
+module.exports = {
     proxy: {
         prefix: '/api',
         url: 'http://localhost:3001',
