@@ -34,7 +34,7 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
     return (
         <DisplayApartmentsStyle boxes={boxes}>
             {
-                apartments.map(
+                apartments && apartments.map(
                     (ap: ApartmentEntity) => {
                         if (boxes) {                        
                             return (
