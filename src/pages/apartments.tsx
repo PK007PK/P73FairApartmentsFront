@@ -39,7 +39,7 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
     useEffect(()=>{
         (async (): Promise<void> => {
             try {
-                const resp = await fetch(`/api/apartment/${apartmentId}`);
+                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${apartmentId}`);
                 const data = await resp.json();
                 setApartmentDetails(data);                
             } catch(err) {

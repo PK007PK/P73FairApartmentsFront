@@ -30,7 +30,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
     useEffect(()=>{
         if (id) {(async (): Promise<void> => {
             try {
-                const resp = await fetch(`/api/apartment/${id}`);
+                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id}`);
                 const data = await resp.json();
                 setForm(data);
             } catch(err) {
