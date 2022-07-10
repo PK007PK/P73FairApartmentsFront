@@ -19,8 +19,8 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
         (async (): Promise<void> => {
             try {
                 const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/search/${search}`);
-                const data = await resp.json();
-                setApartments(data);
+                const data = await resp?.json();
+                data && setApartments(data);
             } catch(err) {
                 console.log(err);
             }
