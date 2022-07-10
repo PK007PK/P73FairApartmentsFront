@@ -27,6 +27,8 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
         })()
     },[search])
 
+    console.log(apartments);
+    
     if (apartments === []) {
         return <p>Brak nieruchomości</p>;
     }
