@@ -78,5 +78,13 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%", 
+    "not dead", 
+    "not ie 11", 
+    "not chrome < 51", 
+    "not safari < 10", 
+    "not android < 51"
+    ]
 }
