@@ -44,7 +44,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         setLoading(true);
 
         try {
-            const res = await fetch(`/api/apartment/${id ? "update" : "add"}`, {
+            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id ? "update" : "add"}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
