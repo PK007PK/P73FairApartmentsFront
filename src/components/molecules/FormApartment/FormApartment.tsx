@@ -68,7 +68,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         setLoading(true);
 
         try {
-            const res = await fetch(`/api/apartment/delete/`, {
+            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/delete/`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
