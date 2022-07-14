@@ -45,7 +45,7 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
                         } else {
                             return (
                                 <Link 
-                                    to="apartments"
+                                    to="/apartments"
                                     state={{ apartmentId: ap.id }}
                                     key={ap.id}
                                 >
