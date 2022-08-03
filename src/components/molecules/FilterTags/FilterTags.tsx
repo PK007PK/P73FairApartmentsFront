@@ -1,10 +1,9 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import { pathCheck } from 'utils/pathCheck';
-
+import { tagsUsed } from 'hooks/tagsUsed';
 import { FilterTagsStyle } from './FilterTags.style';
 import { useFilterTagsGraphQLData } from './useFilterTagsGraphQLData'
-import { tagsUsed } from 'hooks/tagsUsed';
 
 export const FilterTags: FC<{location: Location}> = ({ location }): JSX.Element => {
     const counts = tagsUsed();

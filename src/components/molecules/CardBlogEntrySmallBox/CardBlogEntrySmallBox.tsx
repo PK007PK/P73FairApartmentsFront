@@ -1,6 +1,6 @@
 import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { Logo } from 'components/atoms/Logo/Logo';
+import { Logo } from 'components';
 import { CardBlogEntrySmallBoxStyle } from './CardBlogEntrySmallBox.style';
 
 interface Props {

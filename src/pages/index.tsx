@@ -1,27 +1,21 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { Search } from 'components/search';
-import { SEO } from 'components/atoms/SEO/SEO';
-import { Pagination } from 'components/atoms/Pagination/Pagination';
+import { SEO } from 'components';
+import { Pagination } from 'components';
 import { SectionHero } from 'components/SectionHero/SectionHero';
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
-import { Layout } from 'components/organisms/Layout/Layout';
-import { CardContactForm } from 'components/molecules/CardContactForm/CardContactForm';
-import { FilterCategory } from 'components/molecules/FilterCategory/FilterCategory';
-import { FilterTags } from 'components/molecules/FilterTags/FilterTags';
-import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
-import { Newsletter } from 'components/organisms/Newsletter/Newsletter';
-import { PostsToDisplay } from 'components/molecules/PostsToDisplay/PostsToDisplay';
-import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { BootsContainer, BootsRow, BootsColumn } from 'components';
+import { Layout } from 'components';
+import { CardContactForm } from 'components';
+import { FilterCategory } from 'components';
+import { FilterTags } from 'components';
+import { HeroTextBlock } from 'components';
+import { PostsToDisplay } from 'components';
+import { SearchApartment } from 'components';
+import { Title } from 'components';
+import { DisplayApartments } from 'components';
 import { SanityPagesBasicStructure } from 'types/SanityPagesBasicStructure';
-import { InfiniteScroll } from 'components/atoms/InfiniteScroll/InfiniteScroll';
-import { Accordion } from 'components/atoms/Accordion/Accordion';
-import { accordionTemplateData } from 'data/accordionTemplateData';
-import { SearchApartment } from 'components/molecules/SearchApartment/SearchApartment';
-import { Title } from 'components/atoms/Title/Title';
-import { DisplayApartments } from 'components/molecules/DisplayApartments/DisplayApartments';
 
 const searchIndices = [{ name: `Pages`, title: `Pages` }];
 
@@ -189,16 +183,13 @@ const IndexPage: React.FunctionComponent<Props> = ({ data, pageContext, location
                         /> */}
                     </BootsColumn>
                     <BootsColumn md={4}>
-                        {/* <Newsletter style={{ marginBottom: '50px' }} /> */}
                         <CardContactForm />
-                        {/* <Accordion title="Accordion" data={accordionTemplateData} /> */}
                     </BootsColumn>
                 </BootsRow>
                 <BootsRow>
                     <BootsColumn>
                         <Title as="h2" center={false}>Nieruchomości w bazie</Title>
                         <SearchApartment />
-                        {/* <InfiniteScroll title="Infinite scroll" /> */}
                         <DisplayApartments />
                     </BootsColumn>
                 </BootsRow>

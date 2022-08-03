@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { MenuItemsListStyle } from './MenuItemsList.style';
 import { CommonProps } from 'types/commonProps';
-import { SanityQuery } from 'types/sanityQuery';
 
 interface Props extends CommonProps {}
 interface QueryStructure {

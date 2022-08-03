@@ -1,5 +1,5 @@
-import { Button } from 'components/atoms/Button/Button';
 import React, {SyntheticEvent, useEffect, useState} from 'react';
+import { Button } from 'components';
 import { NewApartmentEntity } from 'types/apartment';
 import { FormApartmentStyle } from './FormApartment.style';
 

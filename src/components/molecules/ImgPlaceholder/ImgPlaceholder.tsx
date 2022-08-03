@@ -1,7 +1,7 @@
 import React from 'react'
-import { Logo } from "components/atoms/Logo/Logo";
-import { ImgPlaceholderStyle } from "./ImgPlaceholder.style";
+import { Logo } from "components";
 import { CommonProps } from 'types/commonProps';
+import { ImgPlaceholderStyle } from "./ImgPlaceholder.style";
 
 interface Props extends CommonProps {}
 

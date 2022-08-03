@@ -1,9 +1,9 @@
 import React from 'react';
-import { CardApartmentEntryStyle } from './CardApartmentEntry.style';
+import { CardMapSmall } from 'components';
+import { Image } from 'components';
+import { ImgPlaceholder } from 'components';
 import { SimpleApartmentEntity } from 'types/apartment';
-import { CardMapSmall } from 'components/molecules/CardMapSmall/CardMapSmall';
-import { Image } from 'components/atoms/Image/Image';
-import { ImgPlaceholder } from 'components/molecules/ImgPlaceholder/ImgPlaceholder';
+import { CardApartmentEntryStyle } from './CardApartmentEntry.style';
 
 export const CardApartmentEntry: React.FunctionComponent<SimpleApartmentEntity> = (props) => {
     const { 

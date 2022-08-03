@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
-import { Button } from 'components/atoms/Button/Button';
+import { Button } from 'components';
 import { CommonProps } from 'types/commonProps';
-import { FormNewsletterStyle } from './FormNewsletter.style';
 import { languageCheck } from 'hooks/languageCheck';
-import { formContactTexts } from './FormNewsletter.texts';
 import { websiteOwnerFormalNameCheck } from 'hooks/websiteOwnerFormalNameCheck';
+import { FormNewsletterStyle } from './FormNewsletter.style';
+import { formContactTexts } from './FormNewsletter.texts';
 
 interface Props extends CommonProps {
     status: string,

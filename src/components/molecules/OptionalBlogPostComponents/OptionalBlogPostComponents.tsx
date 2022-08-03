@@ -1,9 +1,7 @@
 import React from 'react';
+import { CardContactForm } from 'components';
+import { SocialShare } from 'components';
 import { OptionalBlogPostComponentsStyle } from './OptionalBlogPostComponents.style';
-
-import { CardContactForm } from 'components/molecules/CardContactForm/CardContactForm';
-import { Newsletter } from 'components/organisms/Newsletter/Newsletter';
-import { SocialShare } from 'components/molecules/SocialShare/SocialShare';
 
 interface Props {
     data: number[],

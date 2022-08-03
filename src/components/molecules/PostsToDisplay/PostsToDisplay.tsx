@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
+import { CardBlogEntrySmallBox } from 'components';
 import { PostsToDisplayStyles } from './PostsToDisplay.style';
-import { CardBlogEntrySmallBox } from '../CardBlogEntrySmallBox/CardBlogEntrySmallBox';
 
 type DataItem = {
     slug: {

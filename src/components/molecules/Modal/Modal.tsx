@@ -1,10 +1,9 @@
 import React, { useState, forwardRef, useImperativeHandle, useContext, useEffect } from 'react';
-import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
-
-import { ModalStyles } from './Modal.style';
-import { CommonProps } from 'types/commonProps';
 import Portal from 'gatsby/portal';
 import AppContext from 'AppProvider';
+import { CommonProps } from 'types/commonProps';
+import { ModalStyles } from './Modal.style';
+import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
 
 interface Props extends CommonProps {
     title: string,

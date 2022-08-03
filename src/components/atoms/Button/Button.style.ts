@@ -6,6 +6,7 @@ interface Props extends CommonProps {
     secondary?: boolean,
     color?: string,
     padding?: string,
+    type?: 'submit',
 }
 
 export const ButtonStyle = styled.button<Props>`

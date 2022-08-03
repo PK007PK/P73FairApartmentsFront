@@ -1,7 +1,7 @@
-import { AccordionStyles } from "./Accordion.styles";
 import React from 'react'
+import { Title } from "components";
 import { CommonProps } from "types/commonProps";
-import { Title } from "../Title/Title";
+import { AccordionStyles } from "./Accordion.styles";
 
 interface Props extends CommonProps {
     title?: string,

@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import logoSign from 'assets/images/house-user-solid.svg';
 import { StyledLogo } from './Logo.style';
+import logoSign from 'assets/images/house-user-solid.svg';
 
 interface QueryStructure {
     sanityWebsiteSettings: {

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { BootsColumn, BootsRow } from 'components';
+import { Title } from 'components';
 import { CommonProps } from 'types/commonProps';
-import { BootsColumn, BootsRow } from '../BootsElements/BootsElements';
-import { Title } from '../Title/Title';
 import { InfiniteScrollStyle } from './InfiniteScroll.style';
 
 interface Props extends CommonProps {

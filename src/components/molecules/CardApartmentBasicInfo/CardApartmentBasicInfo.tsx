@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { Logo } from 'components/atoms/Logo/Logo';
+import { Logo } from 'components';
+import { Modal } from 'components';
+import { FormApartment } from 'components';
 import { CardApartmentBasicInfoStyle } from './CardApartmentBasicInfo.style';
-import { Modal } from '../Modal/Modal';
-import { FormApartment } from '../FormApartment/FormApartment';
 
 interface Props {
     name: string,

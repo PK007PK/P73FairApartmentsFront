@@ -1,19 +1,16 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
-
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
-import { CardBlogEntry } from 'components/molecules/CardBlogEntry/CardBlogEntry';
-import { Submenu } from 'components/molecules/Submenu/Submenu';
-
-import { MenuDropDownStyles } from './MenuDropDown.styles';
-import { useMenuDropDownGraphQLData } from './useMenuDropDownGraphQLData';
-import { menuDropDownTexts } from './MenuDropDown.texts';
-
 import { AppContext } from 'AppProvider';
-import { categoriesUsed } from '../../../hooks/categoriesUsed';
-import { tagsUsed } from '../../../hooks/tagsUsed';
+import { BootsContainer, BootsRow, BootsColumn } from 'components';
+import { CardBlogEntry } from 'components';
+import { Submenu } from 'components';
+import { categoriesUsed } from 'hooks/categoriesUsed';
+import { tagsUsed } from 'hooks/tagsUsed';
 import { languageCheck } from 'hooks/languageCheck';
+import { MenuDropDownStyles } from './MenuDropDown.styles';
+import { menuDropDownTexts } from './MenuDropDown.texts';
+import { useMenuDropDownGraphQLData } from './useMenuDropDownGraphQLData';
 
 export const MenuDropDown: React.FunctionComponent = (): JSX.Element => {
 

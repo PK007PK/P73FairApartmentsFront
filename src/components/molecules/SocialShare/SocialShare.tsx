@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { languageCheck } from 'hooks/languageCheck';
+import { CommonProps } from 'types/commonProps';
+import { SocialShareStyle } from './SocialShare.styles';
+import { socialShareTexts } from './SocialShare.texts';
 import {
     FacebookShareButton,
     FacebookMessengerShareButton,
@@ -12,12 +15,6 @@ import {
     EmailIcon,
     LinkedinIcon,
 } from 'react-share';
-
-import { languageCheck } from 'hooks/languageCheck';
-import { CommonProps } from 'types/commonProps';
-
-import { SocialShareStyle } from './SocialShare.styles';
-import { socialShareTexts } from './SocialShare.texts';
 
 interface Props extends CommonProps {
     title: string,

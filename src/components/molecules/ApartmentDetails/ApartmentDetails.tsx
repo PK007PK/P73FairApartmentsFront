@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { ApartmentEntity } from 'types/apartment';
 
 interface Props {
@@ -6,12 +6,9 @@ interface Props {
 }
 
 export const ApartmentDetails = ({apartmentDetails}) => {
-    
-
     if (!apartmentDetails) return (
         <p>Pobieram dane...</p> 
     );
-    console.log(apartmentDetails);
 
     return (
         <table>

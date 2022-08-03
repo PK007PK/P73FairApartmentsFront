@@ -1,9 +1,9 @@
-import AppContext from "AppProvider"
-import { Link } from "gatsby"
 import React, { useContext, useEffect, useState } from "react"
+import { Link } from "gatsby"
+import AppContext from "AppProvider"
+import { CardApartmentBasicInfo } from "components"
+import { CardApartmentEntry } from "components"
 import { ApartmentEntity } from "types/apartment"
-import { CardApartmentBasicInfo } from "../CardApartmentBasicInfo/CardApartmentBasicInfo"
-import { CardApartmentEntry } from "../CardApartmentEntry/CardBlogEntry/CardApartmentEntry"
 import { DisplayApartmentsStyle } from "./DisplayApartments.style"
 
 interface Props {

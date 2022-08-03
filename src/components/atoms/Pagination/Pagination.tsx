@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
-import { PaginationStyle } from './Pagination.style';
 import { CommonProps } from 'types/commonProps';
+import { PaginationStyle } from './Pagination.style';
 
 interface Props extends CommonProps {
     pageSize: number,

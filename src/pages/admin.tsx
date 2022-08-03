@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import { SEO } from 'components/atoms/SEO/SEO';
-import { Layout } from 'components/organisms/Layout/Layout';
-import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
+import { SEO } from 'components';
+import { Layout } from 'components';
+import { HeroTextBlock } from 'components';
+import { BootsContainer, BootsRow, BootsColumn } from 'components';
 import { SectionHero } from 'components/SectionHero/SectionHero';
-import { DisplayApartments } from 'components/molecules/DisplayApartments/DisplayApartments';
-import { Modal } from 'components/molecules/Modal/Modal';
-import { FormApartment } from 'components/molecules/FormApartment/FormApartment';
+import { DisplayApartments } from 'components';
+import { Modal } from 'components';
+import { FormApartment } from 'components';
 
 interface Props {
    

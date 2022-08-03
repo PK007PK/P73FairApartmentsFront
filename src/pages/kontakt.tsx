@@ -1,17 +1,14 @@
 import React from 'react';
-
-import { SEO } from 'components/atoms/SEO/SEO';
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
-import { SectionHero } from 'components/SectionHero/SectionHero';
 import { graphql } from 'gatsby';
-
-import BlockContent from '@sanity/block-content-to-react';
-
-import { Layout } from 'components/organisms/Layout/Layout';
-import { ArticleStyling } from 'components/atoms/ArticleStyling/ArticleStyling';
-import { FormContact } from 'components/molecules/FormContact/FormContact';
-import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import BlockContent from '@sanity/block-content-to-react';
+import { HeroTextBlock } from 'components';
+import { SEO } from 'components';
+import { BootsContainer, BootsRow, BootsColumn } from 'components';
+import { SectionHero } from 'components/SectionHero/SectionHero';
+import { Layout } from 'components';
+import { ArticleStyling } from 'components';
+import { FormContact } from 'components';
 
 interface Props {
     data: {

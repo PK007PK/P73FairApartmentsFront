@@ -1,6 +1,6 @@
-import { TitleStyles } from "./Title.styles";
 import React from 'react'
 import { CommonProps } from "types/commonProps";
+import { TitleStyles } from "./Title.styles";
 
 interface Props extends CommonProps {
     as?: React.ElementType,

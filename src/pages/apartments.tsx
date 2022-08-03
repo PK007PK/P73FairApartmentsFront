@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import { SEO } from 'components/atoms/SEO/SEO';
-import { Layout } from 'components/organisms/Layout/Layout';
-import { HeroTextBlock } from 'components/atoms/HeroTextBlock/HeroTextBlock';
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
+import { SEO } from 'components';
+import { Layout } from 'components';
+import { HeroTextBlock } from 'components';
+import { BootsContainer, BootsRow, BootsColumn } from 'components';
 import { SectionHero } from 'components/SectionHero/SectionHero';
-import { ApartmentDetails } from 'components/molecules/ApartmentDetails/ApartmentDetails';
+import { ApartmentDetails } from 'components';
 import { ApartmentEntity } from 'types/apartment';
-import { Image } from 'components/atoms/Image/Image';
+import { Image } from 'components';
+import { ImgPlaceholder } from 'components';
 import { alternateValue } from 'utils/alternateValue';
-import { ImgPlaceholder } from 'components/molecules/ImgPlaceholder/ImgPlaceholder';
 
 interface Props {
     data: {

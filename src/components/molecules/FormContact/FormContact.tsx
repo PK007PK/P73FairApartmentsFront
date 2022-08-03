@@ -57,7 +57,7 @@ export const FormContact: React.FunctionComponent = (): JSX.Element => {
                     </Link>
                 </p>
             </div>
-            <Button full type="submit">
+            <Button type="submit">
                 {texts.send[lang]}
             </Button>
         </FormContactStyle>

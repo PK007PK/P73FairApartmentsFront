@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SubmenuStyle } from './Submenu.style';
-import { CommonProps } from 'types/commonProps';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { CommonProps } from 'types/commonProps';
+import { SubmenuStyle } from './Submenu.style';
 
 interface NodeData {
     name: string,

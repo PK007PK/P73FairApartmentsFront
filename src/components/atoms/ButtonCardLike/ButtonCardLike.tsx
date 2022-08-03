@@ -1,6 +1,6 @@
-import { ButtonCardLikeStyles } from "./ButtonCardLike.styles";
 import React from 'react'
 import { CommonProps } from "types/commonProps";
+import { ButtonCardLikeStyles } from "./ButtonCardLike.styles";
 
 interface Props extends CommonProps {
     title: string, 

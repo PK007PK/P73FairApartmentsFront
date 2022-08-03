@@ -1,8 +1,7 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
-import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
-
 import Portal from 'gatsby/portal';
 import { ModalStyles } from './Modal.styles';
+import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
 
 interface Props {
     children: React.ReactNode;
