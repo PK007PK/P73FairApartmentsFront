@@ -10,6 +10,7 @@ import { ApartmentEntity } from 'types/apartment';
 import { Image } from 'components';
 import { ImgPlaceholder } from 'components';
 import { alternateValue } from 'utils/alternateValue';
+import { detectEnvForApiCalls } from 'hooks/detectEnvForApiCalls';
 
 interface Props {
     data: {
@@ -33,13 +34,12 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
     }, [location])
 
     const [apartmentDetails, setApartmentDetails] = useState<ApartmentEntity | null>(null);
-    console.log(apartmentId);
-    console.log(apartmentDetails);
+    const prefix = detectEnvForApiCalls();    
     
     useEffect(()=>{
-        (async (): Promise<void> => {
+        apartmentId && (async (): Promise<void> => {
             try {
-                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${apartmentId}`);
+                const resp = await fetch(`${prefix}/api/apartment/${apartmentId}`);
                 const data = await resp.json();
                 setApartmentDetails(data);                
             } catch(err) {

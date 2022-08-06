@@ -2,6 +2,7 @@ import React, {SyntheticEvent, useEffect, useState} from 'react';
 import { Button } from 'components';
 import { NewApartmentEntity } from 'types/apartment';
 import { FormApartmentStyle } from './FormApartment.style';
+import { detectEnvForApiCalls } from 'hooks/detectEnvForApiCalls';
 
 interface Props {
     id?: string;
@@ -27,10 +28,12 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         props.id ? setId(props.id) : null;
     },[props])
 
+    const prefix = detectEnvForApiCalls();    
+
     useEffect(()=>{
         if (id) {(async (): Promise<void> => {
             try {
-                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id}`);
+                const resp = await fetch(`${prefix}/api/apartment/${id}`);
                 const data = await resp.json();
                 setForm(data);
             } catch(err) {
@@ -44,7 +47,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         setLoading(true);
 
         try {
-            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id ? "update" : "add"}`, {
+            const res = await fetch(`${prefix}/api/apartment/${id ? "update" : "add"}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +71,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         setLoading(true);
 
         try {
-            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/delete/`, {
+            const res = await fetch(`${prefix}/api/apartment/delete/`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
