@@ -7,6 +7,7 @@ interface Props extends CommonProps {
     color?: string,
     padding?: string,
     type?: 'submit',
+    disabled?: boolean,
 }
 
 export const ButtonStyle = styled.button<Props>`
@@ -27,6 +28,11 @@ export const ButtonStyle = styled.button<Props>`
         `
             width: 100%;
         `}
+
+    &:disabled, &:disabled &:active {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
     &:hover {
         box-shadow: var(--hoverShadow);
