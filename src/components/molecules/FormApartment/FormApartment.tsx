@@ -29,6 +29,9 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         props.id ? setId(props.id) : null;
     }, [props])
 
+    const checkIfRequiredFieldsEntered = () => 
+        form.name === "" || form.price === 0 || form.lat === 0 || form.lon === 0
+      
     const prefix = detectEnvForApiCalls();
 
     useEffect(() => {
@@ -64,7 +67,6 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
                 setId(data.id);
             }
             setAdded(true);
-
         } finally {
             setLoading(false);
         }
@@ -72,6 +74,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
 
     const deleteApartment = async (id: string) => {
         setLoading(true);
+
         try {
             const res = await fetch(`${prefix}/api/apartment/delete/`, {
                 method: 'DELETE',
@@ -164,7 +167,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
                     value={form.lon}
                     onChange={e => updateForm('mainImgLink', e.target.value)}
                 />
-                <Button>Zapisz</Button>
+                <Button disabled={checkIfRequiredFieldsEntered()}>Zapisz</Button>
             </form>
             {id && <Button className='deleteBtn' onClick={() => deleteApartment(id)}>Usuń</Button>}
         </FormApartmentStyle>
