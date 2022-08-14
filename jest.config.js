@@ -17,5 +17,7 @@ module.exports = {
     testEnvironmentOptions: {
         url: `http://localhost`,
     },
+    testEnvironment: 'jsdom',
     setupFiles: [`<rootDir>/loadershim.js`],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
