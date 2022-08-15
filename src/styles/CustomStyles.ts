@@ -3,6 +3,14 @@ import { createGlobalStyle } from 'styled-components';
 const CustomStyles = createGlobalStyle`
 
 
+.displayStoriesWrapper {
+  width: 100%;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .slick-slide {
   padding: 0 2px;

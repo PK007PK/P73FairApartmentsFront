@@ -1,1 +1,0 @@
-it('My first test', () => {});
