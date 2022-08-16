@@ -5,7 +5,7 @@ dotenv.config({ path: '.env' });
 module.exports = {
     proxy: {
         prefix: '/api',
-        url: 'https://pk007pk.smallhost.pl/',
+        url: 'http://localhost:3001',
     },
     siteMetadata: {
         siteUrl: process.env.SITE_URL,

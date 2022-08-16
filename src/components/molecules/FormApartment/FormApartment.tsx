@@ -1,7 +1,9 @@
-import React, {SyntheticEvent, useEffect, useState} from 'react';
+import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { Button } from 'components';
+import { FormField } from 'components';
 import { NewApartmentEntity } from 'types/apartment';
 import { FormApartmentStyle } from './FormApartment.style';
+import { detectEnvForApiCalls } from 'hooks/detectEnvForApiCalls';
 
 interface Props {
     id?: string;
@@ -23,28 +25,35 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
     const [id, setId] = useState('');
     const [form, setForm] = useState<NewApartmentEntity>(emptyApartment);
 
-    useEffect(()=>{
+    useEffect(() => {
         props.id ? setId(props.id) : null;
-    },[props])
+    }, [props])
 
-    useEffect(()=>{
-        if (id) {(async (): Promise<void> => {
-            try {
-                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id}`);
-                const data = await resp.json();
-                setForm(data);
-            } catch(err) {
-                console.log(err);
-            }
-        })()}
-    },[id, props])
+    const checkIfRequiredFieldsEntered = () => 
+        form.name === "" || form.price === 0 || form.lat === 0 || form.lon === 0
+      
+    const prefix = detectEnvForApiCalls();
+
+    useEffect(() => {
+        if (id) {
+            (async (): Promise<void> => {
+                try {
+                    const resp = await fetch(`${prefix}/api/apartment/${id}`);
+                    const data = await resp.json();
+                    setForm(data);
+                } catch (err) {
+                    console.log(err);
+                }
+            })()
+        }
+    }, [id, props])
 
     const addOrUpdateApartment = async (e: SyntheticEvent) => {
         e.preventDefault();
         setLoading(true);
 
         try {
-            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/${id ? "update" : "add"}`, {
+            const res = await fetch(`${prefix}/api/apartment/${id ? "update" : "add"}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +67,6 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
                 setId(data.id);
             }
             setAdded(true);
-
         } finally {
             setLoading(false);
         }
@@ -68,14 +76,14 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         setLoading(true);
 
         try {
-            const res = await fetch(`https://pk007pk.smallhost.pl/api/apartment/delete/`, {
+            const res = await fetch(`${prefix}/api/apartment/delete/`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({id}),
+                body: JSON.stringify({ id }),
             });
-            const {isDeleted} = await res.json();
+            const { isDeleted } = await res.json();
             setDeleted(isDeleted);
         } finally {
             setForm(emptyApartment);
@@ -85,16 +93,15 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
 
     const updateForm = (key: string, value: any) => {
         if (typeof [key] === "number") {
-            
             setForm(form => ({
                 ...form,
                 [key]: Number(value),
             }));
         } else {
-        setForm(form => ({
-            ...form,
-            [key]: value,
-        }));
+            setForm(form => ({
+                ...form,
+                [key]: value,
+            }));
         }
     };
 
@@ -110,82 +117,59 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
         <FormApartmentStyle>
             {loading && <div className='loading'>Loading...</div>}
             <form action="" className="add-form" onSubmit={addOrUpdateApartment}>
-                <p>
-                    <label>
-                        Nazwa: <br/>
-                        <input
-                            type="text"
-                            name="name"
-                            required
-                            maxLength={99}
-                            value={form.name}
-                            onChange={e => updateForm('name', e.target.value)}
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Krótki opis: <br/>
-                        <textarea
-                            name="descriptionShort"
-                            maxLength={999}
-                            value={form.descriptionShort}
-                            onChange={e => updateForm('descriptionShort', e.target.value)}
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Cena: <br/>
-                        <input
-                            type="number"
-                            name="price"
-                            required
-                            min="0" 
-                            max="999999"
-                            value={form.price}
-                            onChange={e => updateForm('price', Number(e.target.value))}
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                    Lat: <br/>
-                        <input
-                            type="number"
-                            name="lat"
-                            required
-                            value={form.lat}
-                            onChange={e => updateForm('lat', Number(e.target.value))}
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                    Lon: <br/>
-                        <input
-                            type="number"
-                            name="lon"
-                            required
-                            value={form.lon}
-                            onChange={e => updateForm('lon', Number(e.target.value))}
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Link do głównego zdjęcia: <br/>
-                        <input
-                            type="text"
-                            name="mainImgLink"
-                            value={form.mainImgLink}
-                            onChange={e => updateForm('mainImgLink', e.target.value)}
-                        />
-                    </label>
-                </p>
-                <Button>Zapisz</Button>
+                <FormField 
+                    label='Nazwa:'
+                    type="text"
+                    name="name"
+                    required
+                    maxLength={99}
+                    value={form.name}
+                    onChange={e => updateForm('name', e.target.value)}
+                />
+                <FormField 
+                    label='Krótki opis:'
+                    name="descriptionShort"
+                    maxLength={999}
+                    value={form.descriptionShort}
+                    onChange={e => updateForm('descriptionShort', e.target.value)}
+                    tag="textarea"
+                />
+                <FormField 
+                    label='Cena:'
+                    type="number"
+                    name="price"
+                    required
+                    min="0"
+                    max="999999"
+                    value={form.price}
+                    onChange={e => updateForm('price', Number(e.target.value))}
+                />
+                <FormField 
+                    label='Szerokość geograficzna:'
+                    type="number"
+                    name="lat"
+                    required
+                    value={form.lat}
+                    onChange={e => updateForm('lat', Number(e.target.value))}
+                />
+                <FormField 
+                    label='Długość geograficzna:'
+                    type="number"
+                    name="lon"
+                    required
+                    value={form.lon}
+                    onChange={e => updateForm('lon', Number(e.target.value))}
+                />
+                <FormField 
+                    label='Link do głównego zdjęcia:'
+                    type="text"
+                    name="mainImgLink"
+                    value={form.lon}
+                    onChange={e => updateForm('mainImgLink', e.target.value)}
+                />
+                <Button disabled={checkIfRequiredFieldsEntered()}>Zapisz</Button>
             </form>
-            {id && <Button className='deleteBtn' onClick={()=>deleteApartment(id)}>Usuń</Button>}
+            {id && <Button className='deleteBtn' onClick={() => deleteApartment(id)}>Usuń</Button>}
         </FormApartmentStyle>
     );
 }

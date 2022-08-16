@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Button } from 'components/atoms/Button/Button';
+import { Button } from 'components';
 import { FormContactStyle } from './FormContact.style';
 import { formContactTexts } from './FormContact.texts';
 import { languageCheck } from 'hooks/languageCheck';

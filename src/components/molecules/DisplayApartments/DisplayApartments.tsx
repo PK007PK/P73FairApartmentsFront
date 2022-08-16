@@ -5,6 +5,7 @@ import { CardApartmentBasicInfo } from "components"
 import { CardApartmentEntry } from "components"
 import { ApartmentEntity } from "types/apartment"
 import { DisplayApartmentsStyle } from "./DisplayApartments.style"
+import { detectEnvForApiCalls } from "hooks/detectEnvForApiCalls"
 
 interface Props {
     boxes: boolean,
@@ -14,11 +15,13 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
     const {boxes} = props;
     const {search} = useContext(AppContext)
     const [apartments, setApartments] = useState<ApartmentEntity[] | []>([])
-    
+
+    const prefix = detectEnvForApiCalls();
+
     useEffect(()=>{
         (async (): Promise<void> => {
             try {
-                const resp = await fetch(`https://pk007pk.smallhost.pl/api/apartment/search/${search}`);
+                const resp = await fetch(`${prefix}/api/apartment/search/${search}`);
                 const data = await resp?.json();
                 data && setApartments(data);
             } catch(err) {
@@ -26,8 +29,6 @@ export const DisplayApartments: React.FunctionComponent<Props> = (props): JSX.El
             }
         })()
     },[search])
-
-    console.log(apartments);
     
     if (apartments === []) {
         return <p>Brak nieruchomości</p>;

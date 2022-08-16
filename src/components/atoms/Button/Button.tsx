@@ -2,13 +2,33 @@ import React from 'react'
 import { CommonProps } from "types/commonProps";
 import { ButtonStyle } from "./Button.style";
 
-interface Props extends CommonProps {
+export interface Props extends CommonProps {
+    disabled?: boolean;
+    full?: boolean;
+    secondary?: boolean;
     type?: 'submit';
 }
 
 export const Button: React.FunctionComponent<Props> = (props): JSX.Element => {
-    const {style, className, onClick, children, type} = props; 
+    const {
+        disabled,
+        className, 
+        children,
+        full, 
+        onClick,
+        secondary, 
+        style,
+        type,
+    } = props; 
     return (
-        <ButtonStyle type={type} style={style} className={className} onClick={onClick}>{children}</ButtonStyle>
+        <ButtonStyle 
+            disabled={disabled} 
+            className={className} 
+            full={full}
+            onClick={onClick}
+            secondary={secondary}
+            style={style} 
+            type={type} 
+        >{children}</ButtonStyle>
     )
 }
