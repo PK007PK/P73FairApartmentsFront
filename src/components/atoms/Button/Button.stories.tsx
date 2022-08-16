@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "./Button"
+import {Props} from './Button'
 
 export default {
   component: Button,
@@ -12,7 +13,12 @@ export default {
   }
 }
 
-const Template = (args) => <div className="displayStoriesWrapper"><Button {...args}>{args.children}</Button></div>
+const Template = (args: Props) => 
+  <div className="displayStoriesWrapper">
+    <Button {...args}>
+      {args.children}
+    </Button>
+  </div>
 
 export const Default = Template.bind({})
 Default.args = {

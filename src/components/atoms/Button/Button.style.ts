@@ -31,7 +31,11 @@ export const ButtonStyle = styled.button<Props>`
 
     &:hover {
         box-shadow: var(--hoverShadow);
-        text-shadow: 1px 1px black;
+    }
+
+    &:active {
+        background-color: white;
+        color: black;
     }
 
     .icon {

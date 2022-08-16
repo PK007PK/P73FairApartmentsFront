@@ -2,7 +2,7 @@ import React from 'react'
 import { CommonProps } from "types/commonProps";
 import { ButtonStyle } from "./Button.style";
 
-interface Props extends CommonProps {
+export interface Props extends CommonProps {
     disabled?: boolean;
     full?: boolean;
     secondary?: boolean;
