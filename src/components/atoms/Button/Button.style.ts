@@ -1,14 +1,8 @@
+import { CommonProps } from 'src/types/commonProps';
 import styled from 'styled-components';
-import { CommonProps } from 'types/commonProps';
+import { ButtonStylingProps } from './Button';
 
-interface Props extends CommonProps {
-    full?: boolean,
-    secondary?: boolean,
-    type?: 'submit',
-    disabled?: boolean,
-}
-
-export const ButtonStyle = styled.button<Props>`
+export const ButtonStyle = styled.button<ButtonStylingProps>`
     background-color: ${({ secondary }) => (secondary ? 'var(--colorActiveSecondary)' : 'var(--colorActivePrimary)')};
     color: var(--colorWhite);
     padding: var(--spacingSmall) var(--spacingMedium);

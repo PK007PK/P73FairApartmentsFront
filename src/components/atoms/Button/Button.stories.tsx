@@ -1,6 +1,9 @@
 import React from "react"
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+
 import { Button } from "./Button"
-import {Props} from './Button'
+
+type ButtonProps = React.ComponentProps<typeof Button>;
 
 export default {
   component: Button,
@@ -11,34 +14,34 @@ export default {
       control: 'text',
     }
   }
-}
+} as ComponentMeta<typeof Button>
 
-const Template = (args: Props) => 
+const ButtonStoryTemplate: ComponentStory<typeof Button> = (args: ButtonProps) => 
   <div className="displayStoriesWrapper">
     <Button {...args}>
       {args.children}
     </Button>
   </div>
 
-export const Default = Template.bind({})
+export const Default = ButtonStoryTemplate.bind({})
 Default.args = {
   disabled: false,
   secondary: false,
   full: false,
 };
 
-export const Diseabled = Template.bind({});
+export const Diseabled = ButtonStoryTemplate.bind({});
 Diseabled.args = {
   disabled: true,
 };
 
-export const Secondary = Template.bind({})
+export const Secondary = ButtonStoryTemplate.bind({})
 Secondary.args = {
   secondary: true,
   disabled: false,
 };
 
-export const VeryLongText = Template.bind({});
+export const VeryLongText = ButtonStoryTemplate.bind({});
 VeryLongText.args = {
   children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 };
