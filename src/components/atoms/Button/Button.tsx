@@ -10,7 +10,7 @@ export interface ButtonStylingProps extends CommonProps {
     disabled?: boolean,
 }
 
-export interface ButtonProps extends ButtonStylingProps {}
+interface ButtonProps extends ButtonStylingProps {}
 
 export const Button: React.FunctionComponent<ButtonProps> = (props): JSX.Element => {
     const {
