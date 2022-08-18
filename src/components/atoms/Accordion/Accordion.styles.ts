@@ -1,9 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { ThemeEntity } from "styles/Theme";
-import { CommonProps } from "types/commonProps";
+import { AccordionStylingProps } from "./Accordion";
 
-interface Props extends CommonProps {
-}
 
 const showBox = keyframes`
     0% {
@@ -25,8 +22,9 @@ const showText = keyframes`
     }
 `
 
-export const AccordionStyles = styled.div<Props>`
+export const AccordionStyles = styled.div<AccordionStylingProps>`
     margin-bottom: var(--spacingMedium);
+    width: 100%;
     .wrapper {}
 
     .item {
@@ -73,6 +71,7 @@ export const AccordionStyles = styled.div<Props>`
     }
 
     .descWrapper {
+        margin-left: var(--spacingSmall);
         display: none;
         transform: scaleY(0);
         transform-origin: 0 0;
