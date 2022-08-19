@@ -1,11 +1,14 @@
 import React, { useContext, useEffect, useState } from "react"
 import { Link } from "gatsby"
-import AppContext from "AppProvider"
-import { CardApartmentBasicInfo } from "components"
-import { CardApartmentEntry } from "components"
-import { ApartmentEntity } from "types/apartment"
+
+import AppContext from "src/AppProvider"
+
+import { CardApartmentBasicInfo } from "../CardApartmentBasicInfo/CardApartmentBasicInfo"
+import { CardApartmentEntry } from "../CardApartmentEntry/CardApartmentEntry"
+
+import { ApartmentEntity } from "src/types/apartment"
 import { DisplayApartmentsStyle } from "./DisplayApartments.style"
-import { detectEnvForApiCalls } from "hooks/detectEnvForApiCalls"
+import { detectEnvForApiCalls } from "src/hooks/detectEnvForApiCalls"
 
 interface Props {
     boxes: boolean,

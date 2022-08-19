@@ -1,16 +1,14 @@
 import React, { useRef } from 'react';
-import { SEO } from 'components';
-import { Layout } from 'components';
-import { HeroTextBlock } from 'components';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { SectionHero } from 'components/SectionHero/SectionHero';
-import { DisplayApartments } from 'components';
-import { Modal } from 'components';
-import { FormApartment } from 'components';
+import { BootsColumn, BootsContainer, BootsRow } from 'src/components/atoms/BootsElements/BootsElements';
+import { HeroTextBlock } from 'src/components/atoms/HeroTextBlock/HeroTextBlock';
+import Modal from 'src/components/atoms/Modal/Modal';
+import { SEO } from 'src/components/atoms/SEO/SEO';
+import { DisplayApartments } from 'src/components/molecules/DisplayApartments/DisplayApartments';
+import { FormApartment } from 'src/components/molecules/FormApartment/FormApartment';
+import { Layout } from 'src/components/organisms/Layout/Layout';
+import { SectionHero } from 'src/components/SectionHero/SectionHero';
 
-interface Props {
-   
-}
+interface Props {}
 
 const Admin: React.FunctionComponent<Props> = (): JSX.Element => {
     const modalRef1 = useRef();

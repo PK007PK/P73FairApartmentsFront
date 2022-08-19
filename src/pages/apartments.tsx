@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
-import { SEO } from 'components';
-import { Layout } from 'components';
-import { HeroTextBlock } from 'components';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { SectionHero } from 'components/SectionHero/SectionHero';
-import { ApartmentDetails } from 'components';
-import { ApartmentEntity } from 'types/apartment';
-import { Image } from 'components';
-import { ImgPlaceholder } from 'components';
-import { alternateValue } from 'utils/alternateValue';
-import { detectEnvForApiCalls } from 'hooks/detectEnvForApiCalls';
+import { Layout } from 'src/components/organisms/Layout/Layout';
+import { SEO } from 'src/components/atoms/SEO/SEO';
+import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { HeroTextBlock } from 'src/components/atoms/HeroTextBlock/HeroTextBlock';
+import { Image } from 'src/components/atoms/Image/Image';
+import { ImgPlaceholder } from 'src/components/molecules/ImgPlaceholder/ImgPlaceholder';
+import { BootsColumn, BootsContainer, BootsRow } from 'src/components/atoms/BootsElements/BootsElements';
+import { ApartmentDetails } from 'src/components/molecules/ApartmentDetails/ApartmentDetails';
+
+import { ApartmentEntity } from 'src/types/apartment';
+import { alternateValue } from 'src/utils/alternateValue';
+import { detectEnvForApiCalls } from 'src/hooks/detectEnvForApiCalls';
 
 interface Props {
     data: {

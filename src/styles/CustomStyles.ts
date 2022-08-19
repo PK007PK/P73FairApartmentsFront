@@ -10,6 +10,10 @@ const CustomStyles = createGlobalStyle`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &--100vh {
+    height: 100vh;
+  }
 }
 
 .slick-slide {

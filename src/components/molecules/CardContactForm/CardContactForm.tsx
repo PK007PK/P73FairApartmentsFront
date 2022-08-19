@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { IoIosContact } from '@react-icons/all-files/io/IoIosContact';
-import { ButtonCardLike } from 'components';
-import { FormContact } from 'components';
-import { CommonProps } from 'types/commonProps';
-import { languageCheck } from 'hooks/languageCheck'
+
+import { ButtonCardLike } from 'src/components/atoms/ButtonCardLike/ButtonCardLike';
+import { FormContact } from '../FormContact/FormContact';
+
+import { CommonProps } from 'src/types/commonProps';
+import { languageCheck } from 'src/hooks/languageCheck'
 import { CardContactFormStyle } from './CardContactForm.style';
 import { CardContactFormTexts } from './CardContactForm.texts';
 

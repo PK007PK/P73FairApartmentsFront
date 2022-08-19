@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { MenuItemsListStyle } from './MenuItemsList.style';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 
 interface Props extends CommonProps {}
 interface QueryStructure {

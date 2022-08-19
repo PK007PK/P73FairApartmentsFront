@@ -1,5 +1,5 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
-import Portal from 'gatsby/portal';
+import Portal from 'src/gatsby/portal';
 import { ModalStyles } from './Modal.styles';
 import { AiFillCloseCircle as Exit } from '@react-icons/all-files/ai/AiFillCloseCircle';
 

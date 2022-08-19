@@ -1,7 +1,11 @@
 import React from 'react';
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
-import { Logo } from 'components';
+
+import { Logo } from 'src/components/atoms/Logo/Logo';
+
 import { CardBlogEntryStyle } from './CardBlogEntry.style';
+
+
 
 interface Props {
     data: {

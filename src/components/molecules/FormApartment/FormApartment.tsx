@@ -1,11 +1,16 @@
 import React, { SyntheticEvent, useEffect, useState } from 'react';
-import { Button } from 'components';
-import { FormField } from 'components';
-import { NewApartmentEntity } from 'types/apartment';
-import { FormApartmentStyle } from './FormApartment.style';
-import { detectEnvForApiCalls } from 'hooks/detectEnvForApiCalls';
 
-interface Props {
+import { NewApartmentEntity } from 'src/types/apartment';
+import { FormApartmentStyle } from './FormApartment.style';
+
+import { FormField } from 'src/components/atoms/FormField/FormField';
+import { Button } from 'src/components/atoms/Button/Button';
+import { CommonProps } from 'src/types/commonProps';
+import { detectEnvForApiCalls } from 'src/hooks/detectEnvForApiCalls';
+
+export interface FormApartmentStylingProps extends CommonProps {}
+
+interface FormApartmentProps extends FormApartmentStylingProps {
     id?: string;
 }
 
@@ -18,7 +23,7 @@ const emptyApartment: NewApartmentEntity = {
     mainImgLink: '',
 }
 
-export const FormApartment: React.FunctionComponent<Props> = (props) => {
+export const FormApartment: React.FunctionComponent<FormApartmentProps> = (props) => {
     const [loading, setLoading] = useState(false);
     const [added, setAdded] = useState(false);
     const [deleted, setDeleted] = useState(false);
@@ -118,6 +123,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
             {loading && <div className='loading'>Loading...</div>}
             <form action="" className="add-form" onSubmit={addOrUpdateApartment}>
                 <FormField 
+                    placeholder="Podaj nazwę"
                     label='Nazwa:'
                     type="text"
                     name="name"
@@ -132,7 +138,7 @@ export const FormApartment: React.FunctionComponent<Props> = (props) => {
                     maxLength={999}
                     value={form.descriptionShort}
                     onChange={e => updateForm('descriptionShort', e.target.value)}
-                    tag="textarea"
+                    as="textarea"
                 />
                 <FormField 
                     label='Cena:'

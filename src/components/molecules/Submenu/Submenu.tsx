@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 import { SubmenuStyle } from './Submenu.style';
 
 interface NodeData {

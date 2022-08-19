@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Button } from 'components';
-import { CommonProps } from 'types/commonProps';
-import { languageCheck } from 'hooks/languageCheck';
-import { websiteOwnerFormalNameCheck } from 'hooks/websiteOwnerFormalNameCheck';
+
+import { Button } from 'src/components/atoms/Button/Button';
+
+import { CommonProps } from 'src/types/commonProps';
+import { languageCheck } from 'src/hooks/languageCheck';
+import { websiteOwnerFormalNameCheck } from 'src/hooks/websiteOwnerFormalNameCheck';
+
 import { FormNewsletterStyle } from './FormNewsletter.style';
 import { formContactTexts } from './FormNewsletter.texts';
 

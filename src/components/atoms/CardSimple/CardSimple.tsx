@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 import { CardSimpleStyles } from './CardSimple.styles';
 
 interface Props extends CommonProps {

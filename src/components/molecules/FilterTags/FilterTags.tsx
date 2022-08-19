@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import { pathCheck } from 'utils/pathCheck';
-import { tagsUsed } from 'hooks/tagsUsed';
+import { pathCheck } from 'src/utils/pathCheck';
+import { tagsUsed } from 'src/hooks/tagsUsed';
 import { FilterTagsStyle } from './FilterTags.style';
 import { useFilterTagsGraphQLData } from './useFilterTagsGraphQLData'
 

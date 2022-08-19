@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
 import { Link } from 'gatsby';
-import { categoriesUsed } from 'hooks/categoriesUsed';
-import { languageCheck } from 'hooks/languageCheck'
-import { pathCheck } from 'utils/pathCheck';
+
+import { categoriesUsed } from 'src/hooks/categoriesUsed';
+import { languageCheck } from 'src/hooks/languageCheck'
+import { pathCheck } from 'src/utils/pathCheck';
+
 import { FilterCategoryStyle } from './FilterCategory.style';
 import { filterCategoryTexts } from './FilterCategory.texts'
 import { useFilterCategoryGraphQLData } from './useFilterCategoryGraphQLData';

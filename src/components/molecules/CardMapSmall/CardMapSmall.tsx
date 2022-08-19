@@ -1,8 +1,11 @@
 import React, { useRef, useEffect, useState } from "react"
 import mapboxgl from "mapbox-gl"
-import "styles/mapbox-gl.css"
+
+import '../../../styles/mapbox-gl.css'
 
 import { CardMapStyle } from "./CardMapSmall.style";
+import { Title } from "src/components/atoms/Title/Title";
+
 // import { MapMarker } from "components/atoms/MapMarker/MapMarker"
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoicGswMDdwayIsImEiOiJjbDR6NmtsZDIyNmxnM2ttbDA0OWprd244In0.R7-lAWotAL2foidWgJGAaA";
@@ -40,6 +43,7 @@ export const CardMapSmall: React.FunctionComponent<Props> = (props): JSX.Element
 
     return (
         <CardMapStyle ref={mapContainerRef}>
+            <Title >sss</Title>
             {/* <MapMarker map={map} lat={lat} lon={lon}/> */}
         </CardMapStyle>
     )

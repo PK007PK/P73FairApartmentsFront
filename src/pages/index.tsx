@@ -1,21 +1,23 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Search } from 'components/search';
-import { SEO } from 'components';
-import { Pagination } from 'components';
-import { SectionHero } from 'components/SectionHero/SectionHero';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { Layout } from 'components';
-import { CardContactForm } from 'components';
-import { FilterCategory } from 'components';
-import { FilterTags } from 'components';
-import { HeroTextBlock } from 'components';
-import { PostsToDisplay } from 'components';
-import { SearchApartment } from 'components';
-import { Title } from 'components';
-import { DisplayApartments } from 'components';
-import { SanityPagesBasicStructure } from 'types/SanityPagesBasicStructure';
+
+import { HeroTextBlock } from 'src/components/atoms/HeroTextBlock/HeroTextBlock';
+import { Layout } from 'src/components/organisms/Layout/Layout';
+import { SEO } from 'src/components/atoms/SEO/SEO';
+import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { BootsColumn, BootsContainer, BootsRow } from 'src/components/atoms/BootsElements/BootsElements';
+import { FilterCategory } from 'src/components/molecules/FilterCategory/FilterCategory';
+import { FilterTags } from 'src/components/molecules/FilterTags/FilterTags';
+import { Pagination } from 'src/components/atoms/Pagination/Pagination';
+import { Search } from 'src/components/search';
+import { PostsToDisplay } from 'src/components/molecules/PostsToDisplay/PostsToDisplay';
+import { CardContactForm } from 'src/components/molecules/CardContactForm/CardContactForm';
+import { Title } from 'src/components/atoms/Title/Title';
+import { SearchApartment } from 'src/components/molecules/SearchApartment/SearchApartment';
+import { DisplayApartments } from 'src/components/molecules/DisplayApartments/DisplayApartments';
+
+import { SanityPagesBasicStructure } from 'src/types/SanityPagesBasicStructure';
 
 const searchIndices = [{ name: `Pages`, title: `Pages` }];
 
@@ -190,7 +192,7 @@ const IndexPage: React.FunctionComponent<Props> = ({ data, pageContext, location
                     <BootsColumn>
                         <Title as="h2" center={false}>Nieruchomości w bazie</Title>
                         <SearchApartment />
-                        <DisplayApartments />
+                        <DisplayApartments boxes={false}/>
                     </BootsColumn>
                 </BootsRow>
             </BootsContainer>

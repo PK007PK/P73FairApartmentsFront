@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import BlockContent from '@sanity/block-content-to-react';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { SEO } from 'components';
-import { Layout } from 'components';
-import { ArticleStyling } from 'components';
-import { HeroTextBlock } from 'components';
-import { SectionHero } from 'components/SectionHero/SectionHero';
+
+import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
+import { Layout } from 'src/components/organisms/Layout/Layout';
+import { SEO } from 'src/components/atoms/SEO/SEO';
+import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { ArticleStyling } from 'src/components/atoms/ArticleStyling/ArticleStyling';
+
 
 interface Props {
     data: {

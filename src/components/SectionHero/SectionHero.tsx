@@ -1,5 +1,5 @@
 import React from 'react';
-import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';
+import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
 import { SectionHeroStyle } from './SectionHero.styles';
 
 interface Props {

@@ -1,5 +1,5 @@
 import React, { FormEvent, useContext, useState } from 'react';
-import AppContext from 'AppProvider';
+import AppContext from 'src/AppProvider';
 
 export const SearchApartment: React.FunctionComponent = (): JSX.Element => {
     const {search, setSearch} = useContext(AppContext);

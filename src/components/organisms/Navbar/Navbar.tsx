@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { Link } from 'gatsby';
+import { AppContext } from 'src/AppProvider';
+
 import { Sling as Hamburger } from 'hamburger-react';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { MenuDropDown } from 'components';
-import { Logo } from 'components';
-import { Search } from 'components/search';
-import { AppContext } from 'AppProvider';
-import { MenuItemsList } from 'components';
+import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
+
+import { Logo } from 'src/components/atoms/Logo/Logo';
+import { MenuItemsList } from 'src/components/molecules/MenuItemsList/MenuItemsList';
+import { Search } from 'src/components/search';
+import { MenuDropDown } from '../MenuDropDown/MenuDropDown';
 
 import { NavbarStyle } from './Navbar.style';
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Footer } from 'components';
-import { Navbar } from 'components';
-import CustomStyles from 'styles/CustomStyles';
-import GlobalStyles from 'styles/GlobalStyles';
-import Typography from 'styles/Typography';
-import { CommonProps } from 'types/commonProps';
+
+import { Footer } from 'src/components/atoms/Footer/Footer';
+import { Navbar } from '../Navbar/Navbar';
+
+import CustomStyles from 'src/styles/CustomStyles';
+import GlobalStyles from 'src/styles/GlobalStyles';
+import Typography from 'src/styles/Typography';
+import { CommonProps } from 'src/types/commonProps';
 
 interface Props extends CommonProps {}
 

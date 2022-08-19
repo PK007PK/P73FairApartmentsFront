@@ -1,6 +1,6 @@
 import React from 'react';
-import { languageCheck } from 'hooks/languageCheck';
-import { CommonProps } from 'types/commonProps';
+import { languageCheck } from 'src/hooks/languageCheck';
+import { CommonProps } from 'src/types/commonProps';
 import { SocialShareStyle } from './SocialShare.styles';
 import { socialShareTexts } from './SocialShare.texts';
 import {

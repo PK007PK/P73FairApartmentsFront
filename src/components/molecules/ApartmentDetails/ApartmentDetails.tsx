@@ -1,5 +1,5 @@
 import React from 'react'
-import { ApartmentEntity } from 'types/apartment';
+import { ApartmentEntity } from 'src/types/apartment';
 
 interface Props {
     apartmentDetails: ApartmentEntity;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
+import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
 import { FooterStyles } from './Footer.style';
 
 interface SanityQuery {

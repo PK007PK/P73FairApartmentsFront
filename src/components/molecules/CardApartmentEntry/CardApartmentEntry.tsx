@@ -1,8 +1,10 @@
 import React from 'react';
-import { CardMapSmall } from 'components';
-import { Image } from 'components';
-import { ImgPlaceholder } from 'components';
-import { SimpleApartmentEntity } from 'types/apartment';
+
+import { Image } from 'src/components/atoms/Image/Image';
+import { SimpleApartmentEntity } from 'src/types/apartment';
+import { CardMapSmall } from '../CardMapSmall/CardMapSmall';
+import { ImgPlaceholder } from '../ImgPlaceholder/ImgPlaceholder';
+
 import { CardApartmentEntryStyle } from './CardApartmentEntry.style';
 
 export const CardApartmentEntry: React.FunctionComponent<SimpleApartmentEntity> = (props) => {
