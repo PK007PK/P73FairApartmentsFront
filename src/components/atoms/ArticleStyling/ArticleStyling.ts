@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ArticleStyling = styled.article`
+    font-family: "Poppins", sans-serif;
+    
     h1,
     h2,
     h3,
