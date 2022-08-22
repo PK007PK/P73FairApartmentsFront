@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Footer } from 'src/components/atoms/Footer/Footer';
+import { Footer } from 'src/components/molecules/Footer/Footer';
 import { Navbar } from '../Navbar/Navbar';
 
 import CustomStyles from 'src/styles/CustomStyles';

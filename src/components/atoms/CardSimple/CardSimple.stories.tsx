@@ -1,30 +1,30 @@
 import React from "react"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button as TestedComponent} from "./Button"
+import { CardSimple as TestedComponent} from "./CardSimple"
+
 import { BootsColumn, BootsContainer, BootsRow } from "../BootsElements/BootsElements";
 
 type Props = React.ComponentProps<typeof TestedComponent>;
 
 export default {
   component: TestedComponent,
-  title: "Components/Atoms/Button",
+  title: "Components/Atoms/CardSimple",
   argTypes: {
-    children: {
-      defaultValue: "Button",
-      control: 'text',
-    }
   }
 } as ComponentMeta<typeof TestedComponent>
 
-
 const Template: ComponentStory<typeof TestedComponent> = (args: Props) => 
   <div className="displayStoriesWrapper">
-    <TestedComponent {...args}>{args.children}</TestedComponent>
+    <TestedComponent {...args} />
   </div>
 
 export const Default = Template.bind({})
 Default.args = {
-  children: "Click me!"
+  data: {
+    color: "white",
+    backgroundColor: "black",
+    projectName: "Card name",
+  }
 };
 
 const WrappedTemplate: ComponentStory<typeof TestedComponent> = (args: Props) =>
@@ -40,5 +40,10 @@ const WrappedTemplate: ComponentStory<typeof TestedComponent> = (args: Props) =>
 
 export const WrappedDefault = WrappedTemplate.bind({})
 WrappedDefault.args = {
-  children: "Click me!"
+  data: {
+    color: "white",
+    backgroundColor: "black",
+    projectName: "Card name",
+  }
 };
+

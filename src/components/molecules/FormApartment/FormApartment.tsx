@@ -3,8 +3,8 @@ import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { NewApartmentEntity } from 'src/types/apartment';
 import { FormApartmentStyle } from './FormApartment.style';
 
-import { FormField } from 'src/components/atoms/FormField/FormField';
 import { Button } from 'src/components/atoms/Button/Button';
+import { FormField } from 'src/components/atoms/FormField/FormField';
 import { CommonProps } from 'src/types/commonProps';
 import { detectEnvForApiCalls } from 'src/hooks/detectEnvForApiCalls';
 

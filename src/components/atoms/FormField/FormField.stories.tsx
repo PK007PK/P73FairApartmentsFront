@@ -6,7 +6,7 @@ type FormFieldProps = React.ComponentProps<typeof FormField>;
 
 export default {
   component: FormField,
-  title: "Components/Attoms/FormField",
+  title: "Components/Atoms/FormField",
   argTypes: {
     label: {
       defaultValue: "Label",

@@ -1,11 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import React from "react";
+// import "@testing-library/jest-dom/extend-expect";
 import '@testing-library/jest-dom'
 import { FormField } from "./FormField";
 
-
-describe('Test Button component', ()=>{
+describe('Test FormField component', () => {
     it('Render the component', ()=>{
-        render(<FormField label="Testing label" name="Testing name" value="Start value" onChange={()=>{}}/>)
+        render(<FormField label="Testing field" name={"Field one"} value={""} placeholder="Enter value" onChange={()=>{}}/>)
     })
 })

@@ -1,30 +1,27 @@
 import React from "react"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Button as TestedComponent} from "./Button"
+import { ButtonCardLike as TestedComponent} from "./ButtonCardLike"
+import { IoIosContact } from "@react-icons/all-files/io/IoIosContact";
 import { BootsColumn, BootsContainer, BootsRow } from "../BootsElements/BootsElements";
 
 type Props = React.ComponentProps<typeof TestedComponent>;
 
 export default {
   component: TestedComponent,
-  title: "Components/Atoms/Button",
+  title: "Components/Atoms/ButtonCardLike",
   argTypes: {
-    children: {
-      defaultValue: "Button",
-      control: 'text',
-    }
   }
 } as ComponentMeta<typeof TestedComponent>
 
-
 const Template: ComponentStory<typeof TestedComponent> = (args: Props) => 
   <div className="displayStoriesWrapper">
-    <TestedComponent {...args}>{args.children}</TestedComponent>
+    <TestedComponent {...args} />
   </div>
 
 export const Default = Template.bind({})
 Default.args = {
-  children: "Click me!"
+  title: "Component's title",
+  iconComponent: ()=><IoIosContact className="icon" />,
 };
 
 const WrappedTemplate: ComponentStory<typeof TestedComponent> = (args: Props) =>
@@ -40,5 +37,6 @@ const WrappedTemplate: ComponentStory<typeof TestedComponent> = (args: Props) =>
 
 export const WrappedDefault = WrappedTemplate.bind({})
 WrappedDefault.args = {
-  children: "Click me!"
+  title: "Component's title",
+  iconComponent: ()=><IoIosContact className="icon" />,
 };

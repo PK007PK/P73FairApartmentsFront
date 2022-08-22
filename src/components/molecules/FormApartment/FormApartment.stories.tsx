@@ -2,7 +2,7 @@ import React from "react"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { FormApartment } from "./FormApartment"
 
-type FormApartmentProps = React.ComponentProps<typeof FormApartment>;
+type Props = React.ComponentProps<typeof FormApartment>;
 
 export default {
   component: FormApartment,
@@ -11,8 +11,8 @@ export default {
   }
 } as ComponentMeta<typeof FormApartment>
 
-const FormApartmentTemplate: ComponentStory<typeof FormApartment> = (args: FormApartmentProps) => 
-  <div className="displayStoriesWrapper displayStoriesWrapper--100vh">
+const FormApartmentTemplate: ComponentStory<typeof FormApartment> = (args: Props) => 
+  <div className="displayStoriesWrapper displayStoriesWrapper--heightAuto">
     <FormApartment {...args} />
   </div>
 

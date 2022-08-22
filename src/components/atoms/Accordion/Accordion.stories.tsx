@@ -2,11 +2,11 @@ import React from "react"
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Accordion } from "./Accordion"
 
-type AccordionProps = React.ComponentProps<typeof Accordion>;
+type Props = React.ComponentProps<typeof Accordion>;
 
 export default {
   component: Accordion,
-  title: "Components/Attoms/Accordion",
+  title: "Components/Atoms/Accordion",
   argTypes: {
   }
 } as ComponentMeta<typeof Accordion>
@@ -26,7 +26,7 @@ const AccordionData = [
   },
 ]
 
-const AccordionStoryTemplate: ComponentStory<typeof Accordion> = (props: AccordionProps) => {
+const AccordionStoryTemplate: ComponentStory<typeof Accordion> = (props: Props) => {
   const {data, title} = props;
   
   return (

@@ -1,24 +1,12 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
 import { FooterStyles } from './Footer.style';
-
-interface SanityQuery {
-    sanityWebsiteSettings: {
-        copyright: string,
-    },
-}
+import { useFooterGraphQlData } from './useFooterGraphQlData';
 
 export const Footer: React.FunctionComponent = (): JSX.Element => {
-    const query: SanityQuery = useStaticQuery(graphql`
-        {
-            sanityWebsiteSettings {
-                copyright
-            }
-        }
-    `);
-
-    const { copyright: copyRightName } = query.sanityWebsiteSettings;
+   
+    const copyRightName = useFooterGraphQlData();
 
     return (
         <FooterStyles>
@@ -28,7 +16,7 @@ export const Footer: React.FunctionComponent = (): JSX.Element => {
                         <Link to="/polityka">Privacy Policy</Link>
                     </BootsColumn>
                     <BootsColumn className="copyright" sm={6}>
-                        &copy; {copyRightName} {new Date().getFullYear()}
+                        <>&copy; {copyRightName} {new Date().getFullYear()}</>
                     </BootsColumn>
                 </BootsRow>
             </BootsContainer>
