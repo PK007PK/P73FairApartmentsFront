@@ -170,7 +170,7 @@ export const FormApartment: React.FunctionComponent<FormApartmentProps> = (props
                     label='Link do głównego zdjęcia:'
                     type="text"
                     name="mainImgLink"
-                    value={form.lon}
+                    value={form.mainImgLink}
                     onChange={e => updateForm('mainImgLink', e.target.value)}
                 />
                 <Button disabled={checkIfRequiredFieldsEntered()}>Zapisz</Button>
