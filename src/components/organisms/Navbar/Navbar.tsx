@@ -7,7 +7,7 @@ import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/Boot
 
 import { Logo } from 'src/components/atoms/Logo/Logo';
 import { MenuItemsList } from 'src/components/molecules/MenuItemsList/MenuItemsList';
-import { Search } from 'src/components/search';
+import { Search } from 'src/components/organisms/search';
 import { MenuDropDown } from '../MenuDropDown/MenuDropDown';
 
 import { NavbarStyle } from './Navbar.style';

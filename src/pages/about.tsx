@@ -5,7 +5,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
 import { Layout } from 'src/components/organisms/Layout/Layout';
 import { SEO } from 'src/components/atoms/SEO/SEO';
-import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { SectionHero } from 'src/components/molecules/SectionHero/SectionHero';
 import { ArticleStyling } from 'src/components/atoms/ArticleStyling/ArticleStyling';
 
 

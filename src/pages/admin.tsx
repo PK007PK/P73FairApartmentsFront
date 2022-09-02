@@ -6,7 +6,7 @@ import { SEO } from 'src/components/atoms/SEO/SEO';
 import { DisplayApartments } from 'src/components/molecules/DisplayApartments/DisplayApartments';
 import { FormApartment } from 'src/components/molecules/FormApartment/FormApartment';
 import { Layout } from 'src/components/organisms/Layout/Layout';
-import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { SectionHero } from 'src/components/molecules/SectionHero/SectionHero';
 
 interface Props {}
 

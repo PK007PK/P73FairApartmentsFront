@@ -5,12 +5,12 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { HeroTextBlock } from 'src/components/atoms/HeroTextBlock/HeroTextBlock';
 import { Layout } from 'src/components/organisms/Layout/Layout';
 import { SEO } from 'src/components/atoms/SEO/SEO';
-import { SectionHero } from 'src/components/SectionHero/SectionHero';
+import { SectionHero } from 'src/components/molecules/SectionHero/SectionHero';
 import { BootsColumn, BootsContainer, BootsRow } from 'src/components/atoms/BootsElements/BootsElements';
 import { FilterCategory } from 'src/components/molecules/FilterCategory/FilterCategory';
 import { FilterTags } from 'src/components/molecules/FilterTags/FilterTags';
 import { Pagination } from 'src/components/atoms/Pagination/Pagination';
-import { Search } from 'src/components/search';
+import { Search } from 'src/components/organisms/search';
 import { PostsToDisplay } from 'src/components/molecules/PostsToDisplay/PostsToDisplay';
 import { CardContactForm } from 'src/components/molecules/CardContactForm/CardContactForm';
 import { Title } from 'src/components/atoms/Title/Title';
