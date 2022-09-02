@@ -13,7 +13,7 @@ export const Footer: React.FunctionComponent = (): JSX.Element => {
             <BootsContainer between>
                 <BootsRow>
                     <BootsColumn sm={6}>
-                        <Link to="/polityka">Privacy Policy</Link>
+                        <Link to="/polityka">Polityka prywatności</Link>
                     </BootsColumn>
                     <BootsColumn className="copyright" sm={6}>
                         <>&copy; {copyRightName} {new Date().getFullYear()}</>

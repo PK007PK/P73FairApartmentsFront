@@ -42,13 +42,13 @@ const Apartments: React.FunctionComponent<Props> = ({ location }): JSX.Element =
             try {
                 const resp = await fetch(`${prefix}/api/apartment/${apartmentId}`);
                 const data = await resp.json();
-                setApartmentDetails(data);                
+                setApartmentDetails(data);  
             } catch(err) {
                 console.log(err);
             }
         })()
     }, [apartmentId])
-       
+    
     return (
         <Layout>
             <SEO title="O nas" />
