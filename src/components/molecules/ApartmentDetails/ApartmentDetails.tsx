@@ -2,7 +2,7 @@ import React from "react";
 import { PublicApartmentEntity } from "src/types/apartment";
 
 interface Props {
-  apartmentDetails: PublicApartmentEntity;
+  apartmentDetails: PublicApartmentEntity | null;
 }
 
 export const ApartmentDetails: React.FunctionComponent<Props> = ({

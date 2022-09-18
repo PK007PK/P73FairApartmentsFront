@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
-import { ThemeEntity } from 'styles/Theme';
-import { CommonProps } from 'types/commonProps';
-import { StylingProps } from 'types/stylingProps';
+import { ThemeEntity } from 'src/styles/Theme';
+import { CommonProps } from 'src/types/commonProps';
 
 interface Props extends CommonProps {
     small?: boolean,

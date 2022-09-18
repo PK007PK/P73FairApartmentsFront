@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ThemeEntity } from 'styles/Theme';
-import { CommonProps } from 'types/commonProps';
+import { ThemeEntity } from 'src/styles/Theme';
+import { CommonProps } from 'src/types/commonProps';
 
 interface Props extends CommonProps {
 }
@@ -13,10 +13,6 @@ export const CardApartmentEntryStyle = styled.div<Props>`
     ${({ theme }: {theme: ThemeEntity}) => theme.media.smAbove} {
         display: flex;
     }
-
-    /* &:hover {
-        box-shadow: ${({ theme }: {theme: ThemeEntity}) => theme.elevation.dp4};
-    } */
 
     .imgWrapper,
     .picture {

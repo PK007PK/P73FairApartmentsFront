@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ThemeEntity } from 'styles/Theme';
+import { ThemeEntity } from 'src/styles/Theme';
 
 export const CardContactFormStyle = styled.div`
     margin-bottom: var(--spacingMedium);
