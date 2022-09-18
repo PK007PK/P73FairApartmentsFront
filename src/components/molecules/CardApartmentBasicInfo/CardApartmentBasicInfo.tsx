@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
-import { Logo } from 'components';
-import { Modal } from 'components';
-import { FormApartment } from 'components';
+
+import { Logo } from 'src/components/atoms/Logo/Logo';
+import Modal from 'src/components/atoms/Modal/Modal';
+import { FormApartment } from '../FormApartment/FormApartment';
+
 import { CardApartmentBasicInfoStyle } from './CardApartmentBasicInfo.style';
 
 interface Props {

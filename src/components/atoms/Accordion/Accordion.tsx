@@ -1,9 +1,12 @@
 import React from 'react'
-import { Title } from "components";
-import { CommonProps } from "types/commonProps";
+import { CommonProps } from 'src/types/commonProps';
+import { Title } from '../Title/Title';
+
 import { AccordionStyles } from "./Accordion.styles";
 
-interface Props extends CommonProps {
+export interface AccordionStylingProps extends CommonProps {}
+
+interface AccordionProps extends AccordionStylingProps {
     title?: string,
     data: {
         title: string,
@@ -11,7 +14,7 @@ interface Props extends CommonProps {
     }[],
 }
 
-export const Accordion: React.FunctionComponent<Props> = (props): JSX.Element => {
+export const Accordion: React.FunctionComponent<AccordionProps> = (props): JSX.Element => {
     const {title, data} = props;
 
     return (

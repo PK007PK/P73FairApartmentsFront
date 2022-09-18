@@ -1,10 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { Button } from 'components';
+
 import { FormContactStyle } from './FormContact.style';
 import { formContactTexts } from './FormContact.texts';
-import { languageCheck } from 'hooks/languageCheck';
-import { websiteOwnerFormalNameCheck } from 'hooks/websiteOwnerFormalNameCheck';
+import { languageCheck } from 'src/hooks/languageCheck';
+import { websiteOwnerFormalNameCheck } from 'src/hooks/websiteOwnerFormalNameCheck';
+import { Button } from 'src/components/atoms/Button/Button';
 
 export const FormContact: React.FunctionComponent = (): JSX.Element => {
     const lang = languageCheck();

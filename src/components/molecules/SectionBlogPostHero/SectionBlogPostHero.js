@@ -1,6 +1,6 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Logo } from 'components/atoms/Logo/Logo';
+import { Logo } from 'src/components/atoms/Logo/Logo.tsx';
 import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements.ts';
 
 import { SectionBlogPostHeroStyle } from './SectionBlogPostHero.style';

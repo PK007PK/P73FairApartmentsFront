@@ -2,12 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import BlockContent from '@sanity/block-content-to-react';
-import { Layout } from 'components';
-import { SEO } from 'components';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { SectionHero } from 'components/SectionHero/SectionHero';
-import { FormContact } from 'components';
-import { HeroTextBlock } from 'components';
+import { Layout } from 'src/components/organisms/Layout/Layout';
+import { SEO } from 'src/components/atoms/SEO/SEO';
+import { SectionHero } from 'src/components/molecules/SectionHero/SectionHero';
+import { HeroTextBlock } from 'src/components/atoms/HeroTextBlock/HeroTextBlock';
+import { BootsColumn, BootsContainer, BootsRow } from 'src/components/atoms/BootsElements/BootsElements';
+import { FormContact } from 'src/components/molecules/FormContact/FormContact';
+
 
 interface Props {
     data: {

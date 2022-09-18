@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { ThemeEntity } from "styles/Theme";
-import { CommonProps } from "types/commonProps";
+import { CommonProps } from "src/types/commonProps";
 
 interface Props extends CommonProps {
     as?: React.ElementType,

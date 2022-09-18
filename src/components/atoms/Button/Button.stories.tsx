@@ -1,44 +1,44 @@
 import React from "react"
-import { Button } from "./Button"
-import {Props} from './Button'
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Button as TestedComponent} from "./Button"
+import { BootsColumn, BootsContainer, BootsRow } from "../BootsElements/BootsElements";
+
+type Props = React.ComponentProps<typeof TestedComponent>;
 
 export default {
-  component: Button,
-  title: "Components/Attoms/Button",
+  component: TestedComponent,
+  title: "Components/Atoms/Button",
   argTypes: {
     children: {
       defaultValue: "Button",
       control: 'text',
     }
   }
-}
+} as ComponentMeta<typeof TestedComponent>
 
-const Template = (args: Props) => 
+
+const Template: ComponentStory<typeof TestedComponent> = (args: Props) => 
   <div className="displayStoriesWrapper">
-    <Button {...args}>
-      {args.children}
-    </Button>
+    <TestedComponent {...args}>{args.children}</TestedComponent>
   </div>
 
 export const Default = Template.bind({})
 Default.args = {
-  disabled: false,
-  secondary: false,
-  full: false,
+  children: "Click me!"
 };
 
-export const Diseabled = Template.bind({});
-Diseabled.args = {
-  disabled: true,
-};
+const WrappedTemplate: ComponentStory<typeof TestedComponent> = (args: Props) =>
+<div className="displayStoriesWrapper">
+  <BootsContainer>
+    <BootsRow>
+      <BootsColumn sm={6} md={4} lg={3} >
+        <TestedComponent {...args} />
+      </BootsColumn>
+    </BootsRow>
+  </BootsContainer>
+</div>
 
-export const Secondary = Template.bind({})
-Secondary.args = {
-  secondary: true,
-  disabled: false,
-};
-
-export const VeryLongText = Template.bind({});
-VeryLongText.args = {
-  children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+export const WrappedDefault = WrappedTemplate.bind({})
+WrappedDefault.args = {
+  children: "Click me!"
 };

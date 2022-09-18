@@ -1,5 +1,5 @@
 import React from 'react'
-import { CommonProps } from "types/commonProps";
+import { CommonProps } from 'src/types/commonProps';
 import { TitleStyles } from "./Title.styles";
 
 interface Props extends CommonProps {
@@ -10,10 +10,12 @@ interface Props extends CommonProps {
 
 export const Title: React.FunctionComponent<Props> = (props): JSX.Element => {
     const {
-        children, 
         as, 
-        spacing,
         center,
+        children, 
+        className,
+        spacing,
+        style,
     } = props;
 
     return (
@@ -21,6 +23,8 @@ export const Title: React.FunctionComponent<Props> = (props): JSX.Element => {
             as={as} 
             spacing={spacing}
             center={center}
+            className={className}
+            style={style}
         >
             {children}
         </TitleStyles>

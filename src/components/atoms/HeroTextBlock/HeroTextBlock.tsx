@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 import { HeroTextBlockStyle } from './HeroTextBlock.style';
 
 interface Props extends CommonProps {

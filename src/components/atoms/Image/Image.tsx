@@ -1,5 +1,5 @@
 import React from 'react'
-import { CommonProps } from "types/commonProps"
+import { CommonProps } from "src/types/commonProps"
 import { ImageStyle } from './Image.style';
 
 interface Props extends CommonProps {

@@ -1,13 +1,16 @@
 import React, { useEffect, useRef, useContext } from 'react';
 import { Link } from 'gatsby';
 import { gsap } from 'gsap';
-import { AppContext } from 'AppProvider';
-import { BootsContainer, BootsRow, BootsColumn } from 'components';
-import { CardBlogEntry } from 'components';
-import { Submenu } from 'components';
-import { categoriesUsed } from 'hooks/categoriesUsed';
-import { tagsUsed } from 'hooks/tagsUsed';
-import { languageCheck } from 'hooks/languageCheck';
+import { AppContext } from 'src/AppProvider';
+
+import { BootsContainer, BootsRow, BootsColumn } from 'src/components/atoms/BootsElements/BootsElements';
+import { CardBlogEntry } from 'src/components/molecules/CardBlogEntry/CardBlogEntry';
+import { Submenu } from 'src/components/molecules/Submenu/Submenu';
+
+import { categoriesUsed } from 'src/hooks/categoriesUsed';
+import { tagsUsed } from 'src/hooks/tagsUsed';
+import { languageCheck } from 'src/hooks/languageCheck';
+
 import { MenuDropDownStyles } from './MenuDropDown.styles';
 import { menuDropDownTexts } from './MenuDropDown.texts';
 import { useMenuDropDownGraphQLData } from './useMenuDropDownGraphQLData';

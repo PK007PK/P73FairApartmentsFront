@@ -1,6 +1,8 @@
 module.exports = {
+    preset: 'ts-jest',
     transform: {
-        '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
+        '^.+\\.jsx?$': 'babel-jest', // Adding this line solved the issue
+        '^.+\\.tsx?$': 'ts-jest',
     },
     moduleNameMapper: {
         '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
@@ -14,6 +16,7 @@ module.exports = {
     globals: {
         __PATH_PREFIX__: ``,
     },
+    modulePaths: ['<rootDir>'],
     testEnvironmentOptions: {
         url: `http://localhost`,
     },

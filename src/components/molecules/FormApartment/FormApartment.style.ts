@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { FormApartmentStylingProps } from "./FormApartment";
 
-export const FormApartmentStyle = styled.div`
+export const FormApartmentStyle = styled.div<FormApartmentStylingProps>`
     position: relative;
+    width: 100%;
 
     .loading {
         position: absolute;

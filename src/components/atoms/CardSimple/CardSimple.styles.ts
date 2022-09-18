@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 
 interface Props extends CommonProps {
     backgroundColor?: string,
@@ -12,7 +12,8 @@ export const CardSimpleStyles = styled.div<Props>`
     justify-content: flex-start;
     position: relative;
     background-color: ${({ backgroundColor }) => backgroundColor || 'var(--cardDefaultBackgroundColor)'};
-    
+    width: 100%; 
+
     .image {
         height: 200px;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { CommonProps } from 'types/commonProps';
+import { CommonProps } from 'src/types/commonProps';
 import { PaginationStyle } from './Pagination.style';
 
 interface Props extends CommonProps {

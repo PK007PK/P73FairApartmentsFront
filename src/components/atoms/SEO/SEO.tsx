@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import { CommonProps } from 'types/commonProps';
-import { SanityQuery } from 'types/sanityQuery';
+import { CommonProps } from 'src/types/commonProps';
+import { SanityQuery } from 'src/types/sanityQuery';
 
 interface Props extends CommonProps {
     location?: {

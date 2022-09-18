@@ -14,9 +14,9 @@ export const CardApartmentEntryStyle = styled.div<Props>`
         display: flex;
     }
 
-    &:hover {
+    /* &:hover {
         box-shadow: ${({ theme }: {theme: ThemeEntity}) => theme.elevation.dp4};
-    }
+    } */
 
     .imgWrapper,
     .picture {
@@ -25,7 +25,7 @@ export const CardApartmentEntryStyle = styled.div<Props>`
 
         ${({ theme }) => theme.media.smAbove} {
             width: 300px;
-            height: 220px;
+            height: 250px;
         }
 
         background-position: cover;

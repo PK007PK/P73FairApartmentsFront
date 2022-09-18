@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import SectionBlogPostHero from 'src/components/SectionBlogPostHero/SectionBlogPostHero';
+import SectionBlogPostHero from 'src/components/molecules/SectionBlogPostHero/SectionBlogPostHero';
 import BlockContent from '@sanity/block-content-to-react';
 
 import { BootsContainer, BootsRow, BootsColumn } from 'components/atoms/BootsElements/BootsElements';

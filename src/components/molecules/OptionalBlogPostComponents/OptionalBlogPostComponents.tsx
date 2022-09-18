@@ -1,6 +1,8 @@
 import React from 'react';
-import { CardContactForm } from 'components';
-import { SocialShare } from 'components';
+
+import { CardContactForm } from '../CardContactForm/CardContactForm';
+import { SocialShare } from '../SocialShare/SocialShare';
+
 import { OptionalBlogPostComponentsStyle } from './OptionalBlogPostComponents.style';
 
 interface Props {

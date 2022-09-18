@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 
 const CustomStyles = createGlobalStyle`
 
-
 .displayStoriesWrapper {
   width: 100%;
   height: 500px;
@@ -10,6 +9,10 @@ const CustomStyles = createGlobalStyle`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &--100vh {
+    min-height: 100vh;
+  }
 }
 
 .slick-slide {
