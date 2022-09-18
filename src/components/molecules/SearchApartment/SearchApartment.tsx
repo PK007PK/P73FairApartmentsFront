@@ -1,20 +1,30 @@
-import React, { FormEvent, useContext, useState } from 'react';
-import AppContext from 'src/AppProvider';
+import React, { FormEvent, useContext, useState } from "react";
+import AppContext from "src/AppProvider";
+import { CommonProps } from "src/types/commonProps";
 
-export const SearchApartment: React.FunctionComponent = (): JSX.Element => {
-    const {search, setSearch} = useContext(AppContext);
-    const [inputVal, setInputVal] = useState<string>(search);
+interface Props extends CommonProps {}
 
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        setSearch(inputVal);
-        setInputVal("");
-    }
+export const SearchApartment: React.FunctionComponent<Props> = (
+  props
+): JSX.Element => {
+  const { style } = props;
+  const { search, setSearch } = useContext(AppContext);
+  const [inputVal, setInputVal] = useState<string>(search);
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={inputVal} onChange={e => setInputVal(e.target.value)}/>
-            <button>Search</button>
-        </form>
-    )
-}
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    setSearch(inputVal);
+    setInputVal("");
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={style}>
+      <input
+        type="text"
+        value={inputVal}
+        onChange={(e) => setInputVal(e.target.value)}
+      />
+      <button>Search</button>
+    </form>
+  );
+};

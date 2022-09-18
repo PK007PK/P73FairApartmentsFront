@@ -206,7 +206,7 @@ const IndexPage: React.FunctionComponent<Props> = ({
             <Title as="h2" center={false}>
               Nieruchomości w bazie
             </Title>
-            <SearchApartment />
+            <SearchApartment style={{ marginBottom: "20px" }} />
           </BootsColumn>
         </BootsRow>
         <DisplayApartments boxes={false} />

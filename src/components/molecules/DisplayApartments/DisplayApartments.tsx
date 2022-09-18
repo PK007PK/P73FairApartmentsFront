@@ -53,11 +53,7 @@ export const DisplayApartments: React.FunctionComponent<Props> = (
               />
             );
           } else {
-            return (
-              <Link to="/apartments" state={{ apartmentId: ap.id }} key={ap.id}>
-                <CardApartmentEntry key={ap.id} {...ap} />
-              </Link>
-            );
+            return <CardApartmentEntry key={ap.id} {...ap} />;
           }
         })}
     </DisplayApartmentsStyle>

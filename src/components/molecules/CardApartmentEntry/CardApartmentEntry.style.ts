@@ -14,9 +14,9 @@ export const CardApartmentEntryStyle = styled.div<Props>`
         display: flex;
     }
 
-    &:hover {
+    /* &:hover {
         box-shadow: ${({ theme }: {theme: ThemeEntity}) => theme.elevation.dp4};
-    }
+    } */
 
     .imgWrapper,
     .picture {
