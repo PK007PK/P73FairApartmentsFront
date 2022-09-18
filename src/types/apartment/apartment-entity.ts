@@ -1,16 +1,28 @@
-export interface SimpleApartmentEntity {
+export interface PublicApartmentEntity {
     id: string;
+    name: string;
+    adress?: string;
+    status?: number;
+    mainImgLink: string;
+    currentAgreement?: string;
     lat: number;
     lon: number;
-    price: number;
-    name: string;
     descriptionShort: string;
-    mainImgLink: string;
+    space?: number;
+    floor?: number;
+    kitchenDesc?: string;
+    roomsDesc?: string;
+    otherSpacesDesc?: string;
+    instalationDesc?: string;
+    administrationCosts?: number;
+    otherCostsDesc?: string;
 }
 
-export interface ApartmentEntity extends SimpleApartmentEntity {
+export interface FullApartmentEntity extends PublicApartmentEntity {
+    currentTenant?: string;
+    owner?: string;
 }
 
-export interface NewApartmentEntity extends Omit<ApartmentEntity, 'id'> {
+export interface NewApartmentEntity extends Omit<FullApartmentEntity, 'id'> {
     id?: string;
 }
