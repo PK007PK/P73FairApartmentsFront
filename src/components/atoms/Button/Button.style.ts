@@ -1,4 +1,3 @@
-import { CommonProps } from 'src/types/commonProps';
 import styled from 'styled-components';
 import { ButtonStylingProps } from './Button';
 

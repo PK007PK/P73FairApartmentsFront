@@ -5,5 +5,4 @@ export const PostsToDisplayStyles = styled.div`
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    /* flex-wrap: wrap; */
 `;

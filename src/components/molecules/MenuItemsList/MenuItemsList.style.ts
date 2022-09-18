@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { CommonProps } from 'types/commonProps';
-import { ThemeEntity } from 'styles/Theme';
-import { StylingProps } from 'types/stylingProps';
+import { CommonProps } from 'src/types/commonProps';
+import { ThemeEntity } from 'src/styles/Theme';
 
 interface Props extends CommonProps {}
 
