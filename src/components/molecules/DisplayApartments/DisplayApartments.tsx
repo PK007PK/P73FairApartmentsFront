@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "gatsby";
 
 import AppContext from "src/AppProvider";
 
 import { CardApartmentBasicInfo } from "../CardApartmentBasicInfo/CardApartmentBasicInfo";
 import { CardApartmentEntry } from "../CardApartmentEntry/CardApartmentEntry";
 
-import { ApartmentEntity } from "src/types/apartment";
+import { PublicApartmentEntity } from "src/types/apartment";
 import { DisplayApartmentsStyle } from "./DisplayApartments.style";
 import { detectEnvForApiCalls } from "src/hooks/detectEnvForApiCalls";
 
@@ -19,7 +18,9 @@ export const DisplayApartments: React.FunctionComponent<Props> = (
 ): JSX.Element => {
   const { boxes } = props;
   const { search } = useContext(AppContext);
-  const [apartments, setApartments] = useState<ApartmentEntity[] | []>([]);
+  const [apartments, setApartments] = useState<PublicApartmentEntity[] | []>(
+    []
+  );
 
   const prefix = detectEnvForApiCalls();
 
@@ -42,7 +43,7 @@ export const DisplayApartments: React.FunctionComponent<Props> = (
   return (
     <DisplayApartmentsStyle boxes={boxes}>
       {apartments &&
-        apartments.map((ap: ApartmentEntity) => {
+        apartments.map((ap: PublicApartmentEntity) => {
           if (boxes) {
             return (
               <CardApartmentBasicInfo
