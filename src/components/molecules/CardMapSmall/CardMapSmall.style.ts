@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const CardMapStyle = styled.div`
-    width: 426px;
     height: 100%;
+    min-height: 220px;
+    width: 100%;
     background-color: var(--colorActivePrimary);
 
     .marker {

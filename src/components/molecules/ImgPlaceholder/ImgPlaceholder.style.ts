@@ -6,5 +6,6 @@ export const ImgPlaceholderStyle = styled.div`
     align-items: stretch;
     border: 1px solid black;
     height: 100%;
+    min-height: 220px;
     width: 100%;
 `
