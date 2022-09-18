@@ -13,7 +13,11 @@ import {
 } from "src/components/atoms/BootsElements/BootsElements";
 import { ApartmentDetails } from "src/components/molecules/ApartmentDetails/ApartmentDetails";
 
+<<<<<<< HEAD
 import { PublicApartmentEntity } from "src/types/apartment";
+=======
+import { ApartmentEntity } from "src/types/apartment";
+>>>>>>> f32a68480981b698fd8c928e39819a58c68bf676
 import { alternateValue } from "src/utils/alternateValue";
 import { detectEnvForApiCalls } from "src/hooks/detectEnvForApiCalls";
 
@@ -40,7 +44,11 @@ const Apartments: React.FunctionComponent<Props> = ({
   }, [location]);
 
   const [apartmentDetails, setApartmentDetails] =
+<<<<<<< HEAD
     useState<PublicApartmentEntity | null>(null);
+=======
+    useState<ApartmentEntity | null>(null);
+>>>>>>> f32a68480981b698fd8c928e39819a58c68bf676
   const prefix = detectEnvForApiCalls();
 
   useEffect(() => {
