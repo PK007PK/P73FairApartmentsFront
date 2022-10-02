@@ -54,6 +54,7 @@ export const NavbarStyle = styled.nav<Props>`
 
     .burgerWrapper {
         margin-left: 10px;
+        display: flex;
     }
 
     .logoWrapper,

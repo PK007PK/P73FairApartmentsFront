@@ -7,7 +7,7 @@ import { CardApartmentEntry } from "../CardApartmentEntry/CardApartmentEntry";
 
 import { PublicApartmentEntity } from "src/types/apartment";
 import { DisplayApartmentsStyle } from "./DisplayApartments.style";
-import { detectEnvForApiCalls } from "src/hooks/detectEnvForApiCalls";
+import { detectEnvForApiCalls } from "src/utils/detectEnvForApiCalls";
 
 interface Props {
   boxes: boolean;

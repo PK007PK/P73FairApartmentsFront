@@ -57,6 +57,7 @@
     "gatsby-transformer-sharp": "^4.23.0",
     "gsap": "^3.11.1",
     "hamburger-react": "^2.5.0",
+    "jwt-decode": "^3.1.2",
     "mapbox-gl": "^2.10.0",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
@@ -77,6 +78,7 @@
     "not android < 51"
   ],
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",

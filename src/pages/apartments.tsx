@@ -15,7 +15,7 @@ import { ApartmentDetails } from "src/components/molecules/ApartmentDetails/Apar
 
 import { PublicApartmentEntity } from "src/types/apartment";
 import { alternateValue } from "src/utils/alternateValue";
-import { detectEnvForApiCalls } from "src/hooks/detectEnvForApiCalls";
+import { detectEnvForApiCalls } from "src/utils/detectEnvForApiCalls";
 
 interface Props {
   data: {
