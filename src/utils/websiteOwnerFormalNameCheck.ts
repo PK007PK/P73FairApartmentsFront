@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { SanityQuery } from 'types/sanityQuery';
+import { SanityQuery } from 'src/types/sanityQuery';
 
 export function websiteOwnerFormalNameCheck(): string {
     const data: SanityQuery = useStaticQuery(graphql`

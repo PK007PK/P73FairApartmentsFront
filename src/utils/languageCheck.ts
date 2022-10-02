@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
-import { languageInterface } from 'types/languageInterface';
-import { SanityQuery } from 'types/sanityQuery';
+import { languageInterface } from 'src/types/languageInterface';
+import { SanityQuery } from 'src/types/sanityQuery';
 
 export function languageCheck(): string {
     const data: SanityQuery = useStaticQuery(graphql`
